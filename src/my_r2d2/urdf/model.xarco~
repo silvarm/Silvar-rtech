@@ -1,0 +1,20 @@
+<xacro:macro name="blue_shape" params="name *shape">
+    <link name="${name}">
+        <visual>
+            <geometry>
+                <xacro:insert_block name="shape" />
+            </geometry>
+            <material name="blue"/>
+        </visual>
+        <collision>
+            <geometry>
+                <xacro:insert_block name="shape" />
+            </geometry>
+        </collision>
+    </link>
+</xacro:macro>
+
+<xacro:blue_shape name="base_link">
+    <cylinder radius=".42" length=".01" />
+</xacro:blue_shape>
+
