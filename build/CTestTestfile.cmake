@@ -6,3 +6,4 @@
 # testing this directory and lists subdirectories to be tested as well.
 SUBDIRS(gtest)
 SUBDIRS(my_r2d2)
+SUBDIRS(r2d2_navigator)

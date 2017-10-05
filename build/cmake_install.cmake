@@ -118,6 +118,7 @@ IF(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
   INCLUDE("/home/tudeng/silvar-rtech/build/gtest/cmake_install.cmake")
   INCLUDE("/home/tudeng/silvar-rtech/build/my_r2d2/cmake_install.cmake")
+  INCLUDE("/home/tudeng/silvar-rtech/build/r2d2_navigator/cmake_install.cmake")
 
 ENDIF(NOT CMAKE_INSTALL_LOCAL_ONLY)
 

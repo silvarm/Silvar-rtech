@@ -2,4 +2,4 @@
 source_root_dir = "/home/tudeng/silvar-rtech/src"
 whitelisted_packages = "".split(';') if "" != "" else []
 blacklisted_packages = "".split(';') if "" != "" else []
-underlay_workspaces = "/opt/ros/indigo".split(';') if "/opt/ros/indigo" != "" else []
+underlay_workspaces = "/home/tudeng/silvar-rtech/devel;/opt/ros/indigo".split(';') if "/home/tudeng/silvar-rtech/devel;/opt/ros/indigo" != "" else []
