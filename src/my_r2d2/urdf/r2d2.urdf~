@@ -36,9 +36,17 @@
   <joint name="base_footprint" type="fixed">
     <parent link="base_footprint"/>
     <child link="base_link"/>
-
+    <origin xyz="0 0 0.47"/>
   </joint>
 
+<link name="eye">
+  </link>
+
+  <joint name="eye" type="fixed">
+    <parent link="box"/>
+    <child link="eye"/>
+    <origin rpy="-1.57075 0 -1.57075"  xyz="0 0 0"/>
+  </joint>s
 
 
   <link name="right_leg">
