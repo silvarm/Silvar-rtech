@@ -1,0 +1,8 @@
+prefix=/home/tudeng/silvar-rtech/devel
+
+Name: griffin_powermate
+Description: Description of griffin_powermate
+Version: 0.0.0
+Cflags: -I/home/tudeng/silvar-rtech/devel/include
+Libs: -L/home/tudeng/silvar-rtech/devel/lib 
+Requires: 

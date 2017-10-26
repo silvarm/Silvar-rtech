@@ -1,2 +1,2 @@
-my_r2d2:r2d2_navigator
+griffin_powermate:keyboard_reader:my_r2d2:pointer_visualizer:usb_camera
 -DCATKIN_DEVEL_PREFIX=/home/tudeng/silvar-rtech/devel -DCMAKE_INSTALL_PREFIX=/home/tudeng/silvar-rtech/install -G Unix Makefiles

@@ -1,0 +1,8 @@
+prefix=/home/tudeng/silvar-rtech/devel
+
+Name: pointer_visualizer
+Description: Description of pointer_visualizer
+Version: 0.0.0
+Cflags: 
+Libs: -L/home/tudeng/silvar-rtech/devel/lib 
+Requires: 
