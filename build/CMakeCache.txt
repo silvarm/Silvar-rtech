@@ -263,6 +263,12 @@ actionlib_DIR:PATH=/opt/ros/indigo/share/actionlib/cmake
 //The directory containing a CMake configuration file for actionlib_msgs.
 actionlib_msgs_DIR:PATH=/opt/ros/indigo/share/actionlib_msgs/cmake
 
+//Value Computed by CMake
+beginners_tutorials_BINARY_DIR:STATIC=/home/tudeng/silvar-rtech/build/beginners_tutorials
+
+//Value Computed by CMake
+beginners_tutorials_SOURCE_DIR:STATIC=/home/tudeng/silvar-rtech/src/beginners_tutorials
+
 //The directory containing a CMake configuration file for catkin.
 catkin_DIR:PATH=/opt/ros/indigo/share/catkin/cmake
 
@@ -335,6 +341,12 @@ message_generation_DIR:PATH=/opt/ros/indigo/share/message_generation/cmake
 
 //The directory containing a CMake configuration file for message_runtime.
 message_runtime_DIR:PATH=/opt/ros/indigo/share/message_runtime/cmake
+
+//Value Computed by CMake
+mouse_reader_BINARY_DIR:STATIC=/home/tudeng/silvar-rtech/build/mouse_reader
+
+//Value Computed by CMake
+mouse_reader_SOURCE_DIR:STATIC=/home/tudeng/silvar-rtech/src/mouse_reader
 
 //Value Computed by CMake
 my_r2d2_BINARY_DIR:STATIC=/home/tudeng/silvar-rtech/build/my_r2d2

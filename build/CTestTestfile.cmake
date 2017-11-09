@@ -6,7 +6,7 @@
 # testing this directory and lists subdirectories to be tested as well.
 SUBDIRS(gtest)
 SUBDIRS(usb_camera)
-SUBDIRS(griffin_powermate)
-SUBDIRS(keyboard_reader)
+SUBDIRS(mouse_reader)
+SUBDIRS(beginners_tutorials)
 SUBDIRS(my_r2d2)
 SUBDIRS(pointer_visualizer)

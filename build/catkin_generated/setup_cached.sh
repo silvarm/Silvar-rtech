@@ -7,9 +7,10 @@
 # new environment variables
 
 # modified environment variables
-export CMAKE_PREFIX_PATH="/home/tudeng/silvar-rtech/devel:$CMAKE_PREFIX_PATH"
-export LD_LIBRARY_PATH="/home/tudeng/silvar-rtech/devel/lib:$LD_LIBRARY_PATH"
-export PKG_CONFIG_PATH="/home/tudeng/silvar-rtech/devel/lib/pkgconfig:$PKG_CONFIG_PATH"
+export CMAKE_PREFIX_PATH="/home/tudeng/silvar-rtech/devel:/opt/ros/indigo"
+export CPATH="/home/tudeng/silvar-rtech/devel/include:/opt/ros/indigo/include"
+export LD_LIBRARY_PATH="/home/tudeng/silvar-rtech/devel/lib:/opt/ros/indigo/lib:/opt/ros/indigo/lib/x86_64-linux-gnu"
+export PKG_CONFIG_PATH="/home/tudeng/silvar-rtech/devel/lib/pkgconfig:/opt/ros/indigo/lib/pkgconfig:/opt/ros/indigo/lib/x86_64-linux-gnu/pkgconfig"
 export PWD="/home/tudeng/silvar-rtech/build"
+export PYTHONPATH="/home/tudeng/silvar-rtech/devel/lib/python2.7/dist-packages:/opt/ros/indigo/lib/python2.7/dist-packages"
 export ROSLISP_PACKAGE_DIRECTORIES="/home/tudeng/silvar-rtech/devel/share/common-lisp"
-export ROS_PACKAGE_PATH="/home/tudeng/silvar-rtech/src:$ROS_PACKAGE_PATH"
