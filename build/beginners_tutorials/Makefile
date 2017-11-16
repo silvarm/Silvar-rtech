@@ -38,6 +38,9 @@ RM = /usr/bin/cmake -E remove -f
 # Escaping for special characters.
 EQUALS = =
 
+# The program to use to edit the cache.
+CMAKE_EDIT_COMMAND = /usr/bin/cmake-gui
+
 # The top-level source directory on which CMake was run.
 CMAKE_SOURCE_DIR = /home/tudeng/silvar-rtech/src
 
@@ -49,8 +52,8 @@ CMAKE_BINARY_DIR = /home/tudeng/silvar-rtech/build
 
 # Special rule for the target edit_cache
 edit_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running interactive CMake command-line interface..."
-	/usr/bin/cmake -i .
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake cache editor..."
+	/usr/bin/cmake-gui -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : edit_cache
 
 # Special rule for the target edit_cache
@@ -149,12 +152,147 @@ depend:
 	cd /home/tudeng/silvar-rtech/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
+# Convenience name for target.
+beginners_tutorials/CMakeFiles/_beginners_tutorials_generate_messages_check_deps_AddTwoInts.dir/rule:
+	cd /home/tudeng/silvar-rtech/build && $(MAKE) -f CMakeFiles/Makefile2 beginners_tutorials/CMakeFiles/_beginners_tutorials_generate_messages_check_deps_AddTwoInts.dir/rule
+.PHONY : beginners_tutorials/CMakeFiles/_beginners_tutorials_generate_messages_check_deps_AddTwoInts.dir/rule
+
+# Convenience name for target.
+_beginners_tutorials_generate_messages_check_deps_AddTwoInts: beginners_tutorials/CMakeFiles/_beginners_tutorials_generate_messages_check_deps_AddTwoInts.dir/rule
+.PHONY : _beginners_tutorials_generate_messages_check_deps_AddTwoInts
+
+# fast build rule for target.
+_beginners_tutorials_generate_messages_check_deps_AddTwoInts/fast:
+	cd /home/tudeng/silvar-rtech/build && $(MAKE) -f beginners_tutorials/CMakeFiles/_beginners_tutorials_generate_messages_check_deps_AddTwoInts.dir/build.make beginners_tutorials/CMakeFiles/_beginners_tutorials_generate_messages_check_deps_AddTwoInts.dir/build
+.PHONY : _beginners_tutorials_generate_messages_check_deps_AddTwoInts/fast
+
+# Convenience name for target.
+beginners_tutorials/CMakeFiles/_beginners_tutorials_generate_messages_check_deps_Num.dir/rule:
+	cd /home/tudeng/silvar-rtech/build && $(MAKE) -f CMakeFiles/Makefile2 beginners_tutorials/CMakeFiles/_beginners_tutorials_generate_messages_check_deps_Num.dir/rule
+.PHONY : beginners_tutorials/CMakeFiles/_beginners_tutorials_generate_messages_check_deps_Num.dir/rule
+
+# Convenience name for target.
+_beginners_tutorials_generate_messages_check_deps_Num: beginners_tutorials/CMakeFiles/_beginners_tutorials_generate_messages_check_deps_Num.dir/rule
+.PHONY : _beginners_tutorials_generate_messages_check_deps_Num
+
+# fast build rule for target.
+_beginners_tutorials_generate_messages_check_deps_Num/fast:
+	cd /home/tudeng/silvar-rtech/build && $(MAKE) -f beginners_tutorials/CMakeFiles/_beginners_tutorials_generate_messages_check_deps_Num.dir/build.make beginners_tutorials/CMakeFiles/_beginners_tutorials_generate_messages_check_deps_Num.dir/build
+.PHONY : _beginners_tutorials_generate_messages_check_deps_Num/fast
+
+# Convenience name for target.
+beginners_tutorials/CMakeFiles/beginners_tutorials_gencpp.dir/rule:
+	cd /home/tudeng/silvar-rtech/build && $(MAKE) -f CMakeFiles/Makefile2 beginners_tutorials/CMakeFiles/beginners_tutorials_gencpp.dir/rule
+.PHONY : beginners_tutorials/CMakeFiles/beginners_tutorials_gencpp.dir/rule
+
+# Convenience name for target.
+beginners_tutorials_gencpp: beginners_tutorials/CMakeFiles/beginners_tutorials_gencpp.dir/rule
+.PHONY : beginners_tutorials_gencpp
+
+# fast build rule for target.
+beginners_tutorials_gencpp/fast:
+	cd /home/tudeng/silvar-rtech/build && $(MAKE) -f beginners_tutorials/CMakeFiles/beginners_tutorials_gencpp.dir/build.make beginners_tutorials/CMakeFiles/beginners_tutorials_gencpp.dir/build
+.PHONY : beginners_tutorials_gencpp/fast
+
+# Convenience name for target.
+beginners_tutorials/CMakeFiles/beginners_tutorials_generate_messages.dir/rule:
+	cd /home/tudeng/silvar-rtech/build && $(MAKE) -f CMakeFiles/Makefile2 beginners_tutorials/CMakeFiles/beginners_tutorials_generate_messages.dir/rule
+.PHONY : beginners_tutorials/CMakeFiles/beginners_tutorials_generate_messages.dir/rule
+
+# Convenience name for target.
+beginners_tutorials_generate_messages: beginners_tutorials/CMakeFiles/beginners_tutorials_generate_messages.dir/rule
+.PHONY : beginners_tutorials_generate_messages
+
+# fast build rule for target.
+beginners_tutorials_generate_messages/fast:
+	cd /home/tudeng/silvar-rtech/build && $(MAKE) -f beginners_tutorials/CMakeFiles/beginners_tutorials_generate_messages.dir/build.make beginners_tutorials/CMakeFiles/beginners_tutorials_generate_messages.dir/build
+.PHONY : beginners_tutorials_generate_messages/fast
+
+# Convenience name for target.
+beginners_tutorials/CMakeFiles/beginners_tutorials_generate_messages_cpp.dir/rule:
+	cd /home/tudeng/silvar-rtech/build && $(MAKE) -f CMakeFiles/Makefile2 beginners_tutorials/CMakeFiles/beginners_tutorials_generate_messages_cpp.dir/rule
+.PHONY : beginners_tutorials/CMakeFiles/beginners_tutorials_generate_messages_cpp.dir/rule
+
+# Convenience name for target.
+beginners_tutorials_generate_messages_cpp: beginners_tutorials/CMakeFiles/beginners_tutorials_generate_messages_cpp.dir/rule
+.PHONY : beginners_tutorials_generate_messages_cpp
+
+# fast build rule for target.
+beginners_tutorials_generate_messages_cpp/fast:
+	cd /home/tudeng/silvar-rtech/build && $(MAKE) -f beginners_tutorials/CMakeFiles/beginners_tutorials_generate_messages_cpp.dir/build.make beginners_tutorials/CMakeFiles/beginners_tutorials_generate_messages_cpp.dir/build
+.PHONY : beginners_tutorials_generate_messages_cpp/fast
+
+# Convenience name for target.
+beginners_tutorials/CMakeFiles/beginners_tutorials_generate_messages_lisp.dir/rule:
+	cd /home/tudeng/silvar-rtech/build && $(MAKE) -f CMakeFiles/Makefile2 beginners_tutorials/CMakeFiles/beginners_tutorials_generate_messages_lisp.dir/rule
+.PHONY : beginners_tutorials/CMakeFiles/beginners_tutorials_generate_messages_lisp.dir/rule
+
+# Convenience name for target.
+beginners_tutorials_generate_messages_lisp: beginners_tutorials/CMakeFiles/beginners_tutorials_generate_messages_lisp.dir/rule
+.PHONY : beginners_tutorials_generate_messages_lisp
+
+# fast build rule for target.
+beginners_tutorials_generate_messages_lisp/fast:
+	cd /home/tudeng/silvar-rtech/build && $(MAKE) -f beginners_tutorials/CMakeFiles/beginners_tutorials_generate_messages_lisp.dir/build.make beginners_tutorials/CMakeFiles/beginners_tutorials_generate_messages_lisp.dir/build
+.PHONY : beginners_tutorials_generate_messages_lisp/fast
+
+# Convenience name for target.
+beginners_tutorials/CMakeFiles/beginners_tutorials_generate_messages_py.dir/rule:
+	cd /home/tudeng/silvar-rtech/build && $(MAKE) -f CMakeFiles/Makefile2 beginners_tutorials/CMakeFiles/beginners_tutorials_generate_messages_py.dir/rule
+.PHONY : beginners_tutorials/CMakeFiles/beginners_tutorials_generate_messages_py.dir/rule
+
+# Convenience name for target.
+beginners_tutorials_generate_messages_py: beginners_tutorials/CMakeFiles/beginners_tutorials_generate_messages_py.dir/rule
+.PHONY : beginners_tutorials_generate_messages_py
+
+# fast build rule for target.
+beginners_tutorials_generate_messages_py/fast:
+	cd /home/tudeng/silvar-rtech/build && $(MAKE) -f beginners_tutorials/CMakeFiles/beginners_tutorials_generate_messages_py.dir/build.make beginners_tutorials/CMakeFiles/beginners_tutorials_generate_messages_py.dir/build
+.PHONY : beginners_tutorials_generate_messages_py/fast
+
+# Convenience name for target.
+beginners_tutorials/CMakeFiles/beginners_tutorials_genlisp.dir/rule:
+	cd /home/tudeng/silvar-rtech/build && $(MAKE) -f CMakeFiles/Makefile2 beginners_tutorials/CMakeFiles/beginners_tutorials_genlisp.dir/rule
+.PHONY : beginners_tutorials/CMakeFiles/beginners_tutorials_genlisp.dir/rule
+
+# Convenience name for target.
+beginners_tutorials_genlisp: beginners_tutorials/CMakeFiles/beginners_tutorials_genlisp.dir/rule
+.PHONY : beginners_tutorials_genlisp
+
+# fast build rule for target.
+beginners_tutorials_genlisp/fast:
+	cd /home/tudeng/silvar-rtech/build && $(MAKE) -f beginners_tutorials/CMakeFiles/beginners_tutorials_genlisp.dir/build.make beginners_tutorials/CMakeFiles/beginners_tutorials_genlisp.dir/build
+.PHONY : beginners_tutorials_genlisp/fast
+
+# Convenience name for target.
+beginners_tutorials/CMakeFiles/beginners_tutorials_genpy.dir/rule:
+	cd /home/tudeng/silvar-rtech/build && $(MAKE) -f CMakeFiles/Makefile2 beginners_tutorials/CMakeFiles/beginners_tutorials_genpy.dir/rule
+.PHONY : beginners_tutorials/CMakeFiles/beginners_tutorials_genpy.dir/rule
+
+# Convenience name for target.
+beginners_tutorials_genpy: beginners_tutorials/CMakeFiles/beginners_tutorials_genpy.dir/rule
+.PHONY : beginners_tutorials_genpy
+
+# fast build rule for target.
+beginners_tutorials_genpy/fast:
+	cd /home/tudeng/silvar-rtech/build && $(MAKE) -f beginners_tutorials/CMakeFiles/beginners_tutorials_genpy.dir/build.make beginners_tutorials/CMakeFiles/beginners_tutorials_genpy.dir/build
+.PHONY : beginners_tutorials_genpy/fast
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
 	@echo "... all (the default if no target is provided)"
 	@echo "... clean"
 	@echo "... depend"
+	@echo "... _beginners_tutorials_generate_messages_check_deps_AddTwoInts"
+	@echo "... _beginners_tutorials_generate_messages_check_deps_Num"
+	@echo "... beginners_tutorials_gencpp"
+	@echo "... beginners_tutorials_generate_messages"
+	@echo "... beginners_tutorials_generate_messages_cpp"
+	@echo "... beginners_tutorials_generate_messages_lisp"
+	@echo "... beginners_tutorials_generate_messages_py"
+	@echo "... beginners_tutorials_genlisp"
+	@echo "... beginners_tutorials_genpy"
 	@echo "... edit_cache"
 	@echo "... install"
 	@echo "... install/local"

@@ -1,0 +1,8 @@
+<launch>
+	<node name="rviz" pkg="rviz" type="rviz" args="-d $(find pointer_visualizer)/config/pointer.rviz" />
+	<node pkg="tf" type="static_transform_publisher" name="sensor_points_tf" args="0 0 0 0 0 0 world odom 100" />
+
+	<node pkg="pointer_visualizer" type="pointer" name="pointer"/>
+
+	<node pkg="mouse_reader" type="mouse_reader" name="mouse_reader"/>
+</launch>

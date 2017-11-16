@@ -38,6 +38,9 @@ RM = /usr/bin/cmake -E remove -f
 # Escaping for special characters.
 EQUALS = =
 
+# The program to use to edit the cache.
+CMAKE_EDIT_COMMAND = /usr/bin/cmake-gui
+
 # The top-level source directory on which CMake was run.
 CMAKE_SOURCE_DIR = /home/tudeng/silvar-rtech/src
 
@@ -49,8 +52,8 @@ CMAKE_BINARY_DIR = /home/tudeng/silvar-rtech/build
 
 # Special rule for the target edit_cache
 edit_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running interactive CMake command-line interface..."
-	/usr/bin/cmake -i .
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake cache editor..."
+	/usr/bin/cmake-gui -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : edit_cache
 
 # Special rule for the target edit_cache
@@ -241,6 +244,370 @@ gtest_main/fast:
 .PHONY : gtest_main/fast
 
 #=============================================================================
+# Target rules for targets named _griffin_powermate_generate_messages_check_deps_PowermateEvent
+
+# Build rule for target.
+_griffin_powermate_generate_messages_check_deps_PowermateEvent: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 _griffin_powermate_generate_messages_check_deps_PowermateEvent
+.PHONY : _griffin_powermate_generate_messages_check_deps_PowermateEvent
+
+# fast build rule for target.
+_griffin_powermate_generate_messages_check_deps_PowermateEvent/fast:
+	$(MAKE) -f griffin_powermate/CMakeFiles/_griffin_powermate_generate_messages_check_deps_PowermateEvent.dir/build.make griffin_powermate/CMakeFiles/_griffin_powermate_generate_messages_check_deps_PowermateEvent.dir/build
+.PHONY : _griffin_powermate_generate_messages_check_deps_PowermateEvent/fast
+
+#=============================================================================
+# Target rules for targets named griffin_powermate
+
+# Build rule for target.
+griffin_powermate: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 griffin_powermate
+.PHONY : griffin_powermate
+
+# fast build rule for target.
+griffin_powermate/fast:
+	$(MAKE) -f griffin_powermate/CMakeFiles/griffin_powermate.dir/build.make griffin_powermate/CMakeFiles/griffin_powermate.dir/build
+.PHONY : griffin_powermate/fast
+
+#=============================================================================
+# Target rules for targets named griffin_powermate_gencpp
+
+# Build rule for target.
+griffin_powermate_gencpp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 griffin_powermate_gencpp
+.PHONY : griffin_powermate_gencpp
+
+# fast build rule for target.
+griffin_powermate_gencpp/fast:
+	$(MAKE) -f griffin_powermate/CMakeFiles/griffin_powermate_gencpp.dir/build.make griffin_powermate/CMakeFiles/griffin_powermate_gencpp.dir/build
+.PHONY : griffin_powermate_gencpp/fast
+
+#=============================================================================
+# Target rules for targets named griffin_powermate_generate_messages
+
+# Build rule for target.
+griffin_powermate_generate_messages: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 griffin_powermate_generate_messages
+.PHONY : griffin_powermate_generate_messages
+
+# fast build rule for target.
+griffin_powermate_generate_messages/fast:
+	$(MAKE) -f griffin_powermate/CMakeFiles/griffin_powermate_generate_messages.dir/build.make griffin_powermate/CMakeFiles/griffin_powermate_generate_messages.dir/build
+.PHONY : griffin_powermate_generate_messages/fast
+
+#=============================================================================
+# Target rules for targets named griffin_powermate_generate_messages_cpp
+
+# Build rule for target.
+griffin_powermate_generate_messages_cpp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 griffin_powermate_generate_messages_cpp
+.PHONY : griffin_powermate_generate_messages_cpp
+
+# fast build rule for target.
+griffin_powermate_generate_messages_cpp/fast:
+	$(MAKE) -f griffin_powermate/CMakeFiles/griffin_powermate_generate_messages_cpp.dir/build.make griffin_powermate/CMakeFiles/griffin_powermate_generate_messages_cpp.dir/build
+.PHONY : griffin_powermate_generate_messages_cpp/fast
+
+#=============================================================================
+# Target rules for targets named griffin_powermate_generate_messages_lisp
+
+# Build rule for target.
+griffin_powermate_generate_messages_lisp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 griffin_powermate_generate_messages_lisp
+.PHONY : griffin_powermate_generate_messages_lisp
+
+# fast build rule for target.
+griffin_powermate_generate_messages_lisp/fast:
+	$(MAKE) -f griffin_powermate/CMakeFiles/griffin_powermate_generate_messages_lisp.dir/build.make griffin_powermate/CMakeFiles/griffin_powermate_generate_messages_lisp.dir/build
+.PHONY : griffin_powermate_generate_messages_lisp/fast
+
+#=============================================================================
+# Target rules for targets named griffin_powermate_generate_messages_py
+
+# Build rule for target.
+griffin_powermate_generate_messages_py: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 griffin_powermate_generate_messages_py
+.PHONY : griffin_powermate_generate_messages_py
+
+# fast build rule for target.
+griffin_powermate_generate_messages_py/fast:
+	$(MAKE) -f griffin_powermate/CMakeFiles/griffin_powermate_generate_messages_py.dir/build.make griffin_powermate/CMakeFiles/griffin_powermate_generate_messages_py.dir/build
+.PHONY : griffin_powermate_generate_messages_py/fast
+
+#=============================================================================
+# Target rules for targets named griffin_powermate_genlisp
+
+# Build rule for target.
+griffin_powermate_genlisp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 griffin_powermate_genlisp
+.PHONY : griffin_powermate_genlisp
+
+# fast build rule for target.
+griffin_powermate_genlisp/fast:
+	$(MAKE) -f griffin_powermate/CMakeFiles/griffin_powermate_genlisp.dir/build.make griffin_powermate/CMakeFiles/griffin_powermate_genlisp.dir/build
+.PHONY : griffin_powermate_genlisp/fast
+
+#=============================================================================
+# Target rules for targets named griffin_powermate_genpy
+
+# Build rule for target.
+griffin_powermate_genpy: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 griffin_powermate_genpy
+.PHONY : griffin_powermate_genpy
+
+# fast build rule for target.
+griffin_powermate_genpy/fast:
+	$(MAKE) -f griffin_powermate/CMakeFiles/griffin_powermate_genpy.dir/build.make griffin_powermate/CMakeFiles/griffin_powermate_genpy.dir/build
+.PHONY : griffin_powermate_genpy/fast
+
+#=============================================================================
+# Target rules for targets named roscpp_generate_messages_cpp
+
+# Build rule for target.
+roscpp_generate_messages_cpp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 roscpp_generate_messages_cpp
+.PHONY : roscpp_generate_messages_cpp
+
+# fast build rule for target.
+roscpp_generate_messages_cpp/fast:
+	$(MAKE) -f griffin_powermate/CMakeFiles/roscpp_generate_messages_cpp.dir/build.make griffin_powermate/CMakeFiles/roscpp_generate_messages_cpp.dir/build
+.PHONY : roscpp_generate_messages_cpp/fast
+
+#=============================================================================
+# Target rules for targets named roscpp_generate_messages_lisp
+
+# Build rule for target.
+roscpp_generate_messages_lisp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 roscpp_generate_messages_lisp
+.PHONY : roscpp_generate_messages_lisp
+
+# fast build rule for target.
+roscpp_generate_messages_lisp/fast:
+	$(MAKE) -f griffin_powermate/CMakeFiles/roscpp_generate_messages_lisp.dir/build.make griffin_powermate/CMakeFiles/roscpp_generate_messages_lisp.dir/build
+.PHONY : roscpp_generate_messages_lisp/fast
+
+#=============================================================================
+# Target rules for targets named roscpp_generate_messages_py
+
+# Build rule for target.
+roscpp_generate_messages_py: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 roscpp_generate_messages_py
+.PHONY : roscpp_generate_messages_py
+
+# fast build rule for target.
+roscpp_generate_messages_py/fast:
+	$(MAKE) -f griffin_powermate/CMakeFiles/roscpp_generate_messages_py.dir/build.make griffin_powermate/CMakeFiles/roscpp_generate_messages_py.dir/build
+.PHONY : roscpp_generate_messages_py/fast
+
+#=============================================================================
+# Target rules for targets named rosgraph_msgs_generate_messages_cpp
+
+# Build rule for target.
+rosgraph_msgs_generate_messages_cpp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 rosgraph_msgs_generate_messages_cpp
+.PHONY : rosgraph_msgs_generate_messages_cpp
+
+# fast build rule for target.
+rosgraph_msgs_generate_messages_cpp/fast:
+	$(MAKE) -f griffin_powermate/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/build.make griffin_powermate/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/build
+.PHONY : rosgraph_msgs_generate_messages_cpp/fast
+
+#=============================================================================
+# Target rules for targets named rosgraph_msgs_generate_messages_lisp
+
+# Build rule for target.
+rosgraph_msgs_generate_messages_lisp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 rosgraph_msgs_generate_messages_lisp
+.PHONY : rosgraph_msgs_generate_messages_lisp
+
+# fast build rule for target.
+rosgraph_msgs_generate_messages_lisp/fast:
+	$(MAKE) -f griffin_powermate/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/build.make griffin_powermate/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/build
+.PHONY : rosgraph_msgs_generate_messages_lisp/fast
+
+#=============================================================================
+# Target rules for targets named rosgraph_msgs_generate_messages_py
+
+# Build rule for target.
+rosgraph_msgs_generate_messages_py: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 rosgraph_msgs_generate_messages_py
+.PHONY : rosgraph_msgs_generate_messages_py
+
+# fast build rule for target.
+rosgraph_msgs_generate_messages_py/fast:
+	$(MAKE) -f griffin_powermate/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/build.make griffin_powermate/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/build
+.PHONY : rosgraph_msgs_generate_messages_py/fast
+
+#=============================================================================
+# Target rules for targets named std_msgs_generate_messages_cpp
+
+# Build rule for target.
+std_msgs_generate_messages_cpp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 std_msgs_generate_messages_cpp
+.PHONY : std_msgs_generate_messages_cpp
+
+# fast build rule for target.
+std_msgs_generate_messages_cpp/fast:
+	$(MAKE) -f griffin_powermate/CMakeFiles/std_msgs_generate_messages_cpp.dir/build.make griffin_powermate/CMakeFiles/std_msgs_generate_messages_cpp.dir/build
+.PHONY : std_msgs_generate_messages_cpp/fast
+
+#=============================================================================
+# Target rules for targets named std_msgs_generate_messages_lisp
+
+# Build rule for target.
+std_msgs_generate_messages_lisp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 std_msgs_generate_messages_lisp
+.PHONY : std_msgs_generate_messages_lisp
+
+# fast build rule for target.
+std_msgs_generate_messages_lisp/fast:
+	$(MAKE) -f griffin_powermate/CMakeFiles/std_msgs_generate_messages_lisp.dir/build.make griffin_powermate/CMakeFiles/std_msgs_generate_messages_lisp.dir/build
+.PHONY : std_msgs_generate_messages_lisp/fast
+
+#=============================================================================
+# Target rules for targets named std_msgs_generate_messages_py
+
+# Build rule for target.
+std_msgs_generate_messages_py: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 std_msgs_generate_messages_py
+.PHONY : std_msgs_generate_messages_py
+
+# fast build rule for target.
+std_msgs_generate_messages_py/fast:
+	$(MAKE) -f griffin_powermate/CMakeFiles/std_msgs_generate_messages_py.dir/build.make griffin_powermate/CMakeFiles/std_msgs_generate_messages_py.dir/build
+.PHONY : std_msgs_generate_messages_py/fast
+
+#=============================================================================
+# Target rules for targets named _keyboard_reader_generate_messages_check_deps_Key
+
+# Build rule for target.
+_keyboard_reader_generate_messages_check_deps_Key: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 _keyboard_reader_generate_messages_check_deps_Key
+.PHONY : _keyboard_reader_generate_messages_check_deps_Key
+
+# fast build rule for target.
+_keyboard_reader_generate_messages_check_deps_Key/fast:
+	$(MAKE) -f keyboard_reader/CMakeFiles/_keyboard_reader_generate_messages_check_deps_Key.dir/build.make keyboard_reader/CMakeFiles/_keyboard_reader_generate_messages_check_deps_Key.dir/build
+.PHONY : _keyboard_reader_generate_messages_check_deps_Key/fast
+
+#=============================================================================
+# Target rules for targets named keyboard_event_publisher
+
+# Build rule for target.
+keyboard_event_publisher: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 keyboard_event_publisher
+.PHONY : keyboard_event_publisher
+
+# fast build rule for target.
+keyboard_event_publisher/fast:
+	$(MAKE) -f keyboard_reader/CMakeFiles/keyboard_event_publisher.dir/build.make keyboard_reader/CMakeFiles/keyboard_event_publisher.dir/build
+.PHONY : keyboard_event_publisher/fast
+
+#=============================================================================
+# Target rules for targets named keyboard_reader
+
+# Build rule for target.
+keyboard_reader: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 keyboard_reader
+.PHONY : keyboard_reader
+
+# fast build rule for target.
+keyboard_reader/fast:
+	$(MAKE) -f keyboard_reader/CMakeFiles/keyboard_reader.dir/build.make keyboard_reader/CMakeFiles/keyboard_reader.dir/build
+.PHONY : keyboard_reader/fast
+
+#=============================================================================
+# Target rules for targets named keyboard_reader_gencpp
+
+# Build rule for target.
+keyboard_reader_gencpp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 keyboard_reader_gencpp
+.PHONY : keyboard_reader_gencpp
+
+# fast build rule for target.
+keyboard_reader_gencpp/fast:
+	$(MAKE) -f keyboard_reader/CMakeFiles/keyboard_reader_gencpp.dir/build.make keyboard_reader/CMakeFiles/keyboard_reader_gencpp.dir/build
+.PHONY : keyboard_reader_gencpp/fast
+
+#=============================================================================
+# Target rules for targets named keyboard_reader_generate_messages
+
+# Build rule for target.
+keyboard_reader_generate_messages: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 keyboard_reader_generate_messages
+.PHONY : keyboard_reader_generate_messages
+
+# fast build rule for target.
+keyboard_reader_generate_messages/fast:
+	$(MAKE) -f keyboard_reader/CMakeFiles/keyboard_reader_generate_messages.dir/build.make keyboard_reader/CMakeFiles/keyboard_reader_generate_messages.dir/build
+.PHONY : keyboard_reader_generate_messages/fast
+
+#=============================================================================
+# Target rules for targets named keyboard_reader_generate_messages_cpp
+
+# Build rule for target.
+keyboard_reader_generate_messages_cpp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 keyboard_reader_generate_messages_cpp
+.PHONY : keyboard_reader_generate_messages_cpp
+
+# fast build rule for target.
+keyboard_reader_generate_messages_cpp/fast:
+	$(MAKE) -f keyboard_reader/CMakeFiles/keyboard_reader_generate_messages_cpp.dir/build.make keyboard_reader/CMakeFiles/keyboard_reader_generate_messages_cpp.dir/build
+.PHONY : keyboard_reader_generate_messages_cpp/fast
+
+#=============================================================================
+# Target rules for targets named keyboard_reader_generate_messages_lisp
+
+# Build rule for target.
+keyboard_reader_generate_messages_lisp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 keyboard_reader_generate_messages_lisp
+.PHONY : keyboard_reader_generate_messages_lisp
+
+# fast build rule for target.
+keyboard_reader_generate_messages_lisp/fast:
+	$(MAKE) -f keyboard_reader/CMakeFiles/keyboard_reader_generate_messages_lisp.dir/build.make keyboard_reader/CMakeFiles/keyboard_reader_generate_messages_lisp.dir/build
+.PHONY : keyboard_reader_generate_messages_lisp/fast
+
+#=============================================================================
+# Target rules for targets named keyboard_reader_generate_messages_py
+
+# Build rule for target.
+keyboard_reader_generate_messages_py: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 keyboard_reader_generate_messages_py
+.PHONY : keyboard_reader_generate_messages_py
+
+# fast build rule for target.
+keyboard_reader_generate_messages_py/fast:
+	$(MAKE) -f keyboard_reader/CMakeFiles/keyboard_reader_generate_messages_py.dir/build.make keyboard_reader/CMakeFiles/keyboard_reader_generate_messages_py.dir/build
+.PHONY : keyboard_reader_generate_messages_py/fast
+
+#=============================================================================
+# Target rules for targets named keyboard_reader_genlisp
+
+# Build rule for target.
+keyboard_reader_genlisp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 keyboard_reader_genlisp
+.PHONY : keyboard_reader_genlisp
+
+# fast build rule for target.
+keyboard_reader_genlisp/fast:
+	$(MAKE) -f keyboard_reader/CMakeFiles/keyboard_reader_genlisp.dir/build.make keyboard_reader/CMakeFiles/keyboard_reader_genlisp.dir/build
+.PHONY : keyboard_reader_genlisp/fast
+
+#=============================================================================
+# Target rules for targets named keyboard_reader_genpy
+
+# Build rule for target.
+keyboard_reader_genpy: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 keyboard_reader_genpy
+.PHONY : keyboard_reader_genpy
+
+# fast build rule for target.
+keyboard_reader_genpy/fast:
+	$(MAKE) -f keyboard_reader/CMakeFiles/keyboard_reader_genpy.dir/build.make keyboard_reader/CMakeFiles/keyboard_reader_genpy.dir/build
+.PHONY : keyboard_reader_genpy/fast
+
+#=============================================================================
 # Target rules for targets named _catkin_empty_exported_target
 
 # Build rule for target.
@@ -254,121 +621,134 @@ _catkin_empty_exported_target/fast:
 .PHONY : _catkin_empty_exported_target/fast
 
 #=============================================================================
-# Target rules for targets named roscpp_generate_messages_cpp
+# Target rules for targets named _beginners_tutorials_generate_messages_check_deps_AddTwoInts
 
 # Build rule for target.
-roscpp_generate_messages_cpp: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 roscpp_generate_messages_cpp
-.PHONY : roscpp_generate_messages_cpp
+_beginners_tutorials_generate_messages_check_deps_AddTwoInts: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 _beginners_tutorials_generate_messages_check_deps_AddTwoInts
+.PHONY : _beginners_tutorials_generate_messages_check_deps_AddTwoInts
 
 # fast build rule for target.
-roscpp_generate_messages_cpp/fast:
-	$(MAKE) -f mouse_reader/CMakeFiles/roscpp_generate_messages_cpp.dir/build.make mouse_reader/CMakeFiles/roscpp_generate_messages_cpp.dir/build
-.PHONY : roscpp_generate_messages_cpp/fast
+_beginners_tutorials_generate_messages_check_deps_AddTwoInts/fast:
+	$(MAKE) -f beginners_tutorials/CMakeFiles/_beginners_tutorials_generate_messages_check_deps_AddTwoInts.dir/build.make beginners_tutorials/CMakeFiles/_beginners_tutorials_generate_messages_check_deps_AddTwoInts.dir/build
+.PHONY : _beginners_tutorials_generate_messages_check_deps_AddTwoInts/fast
 
 #=============================================================================
-# Target rules for targets named roscpp_generate_messages_lisp
+# Target rules for targets named _beginners_tutorials_generate_messages_check_deps_Num
 
 # Build rule for target.
-roscpp_generate_messages_lisp: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 roscpp_generate_messages_lisp
-.PHONY : roscpp_generate_messages_lisp
+_beginners_tutorials_generate_messages_check_deps_Num: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 _beginners_tutorials_generate_messages_check_deps_Num
+.PHONY : _beginners_tutorials_generate_messages_check_deps_Num
 
 # fast build rule for target.
-roscpp_generate_messages_lisp/fast:
-	$(MAKE) -f mouse_reader/CMakeFiles/roscpp_generate_messages_lisp.dir/build.make mouse_reader/CMakeFiles/roscpp_generate_messages_lisp.dir/build
-.PHONY : roscpp_generate_messages_lisp/fast
+_beginners_tutorials_generate_messages_check_deps_Num/fast:
+	$(MAKE) -f beginners_tutorials/CMakeFiles/_beginners_tutorials_generate_messages_check_deps_Num.dir/build.make beginners_tutorials/CMakeFiles/_beginners_tutorials_generate_messages_check_deps_Num.dir/build
+.PHONY : _beginners_tutorials_generate_messages_check_deps_Num/fast
 
 #=============================================================================
-# Target rules for targets named roscpp_generate_messages_py
+# Target rules for targets named beginners_tutorials_gencpp
 
 # Build rule for target.
-roscpp_generate_messages_py: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 roscpp_generate_messages_py
-.PHONY : roscpp_generate_messages_py
+beginners_tutorials_gencpp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 beginners_tutorials_gencpp
+.PHONY : beginners_tutorials_gencpp
 
 # fast build rule for target.
-roscpp_generate_messages_py/fast:
-	$(MAKE) -f mouse_reader/CMakeFiles/roscpp_generate_messages_py.dir/build.make mouse_reader/CMakeFiles/roscpp_generate_messages_py.dir/build
-.PHONY : roscpp_generate_messages_py/fast
+beginners_tutorials_gencpp/fast:
+	$(MAKE) -f beginners_tutorials/CMakeFiles/beginners_tutorials_gencpp.dir/build.make beginners_tutorials/CMakeFiles/beginners_tutorials_gencpp.dir/build
+.PHONY : beginners_tutorials_gencpp/fast
 
 #=============================================================================
-# Target rules for targets named rosgraph_msgs_generate_messages_cpp
+# Target rules for targets named beginners_tutorials_generate_messages
 
 # Build rule for target.
-rosgraph_msgs_generate_messages_cpp: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 rosgraph_msgs_generate_messages_cpp
-.PHONY : rosgraph_msgs_generate_messages_cpp
+beginners_tutorials_generate_messages: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 beginners_tutorials_generate_messages
+.PHONY : beginners_tutorials_generate_messages
 
 # fast build rule for target.
-rosgraph_msgs_generate_messages_cpp/fast:
-	$(MAKE) -f mouse_reader/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/build.make mouse_reader/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/build
-.PHONY : rosgraph_msgs_generate_messages_cpp/fast
+beginners_tutorials_generate_messages/fast:
+	$(MAKE) -f beginners_tutorials/CMakeFiles/beginners_tutorials_generate_messages.dir/build.make beginners_tutorials/CMakeFiles/beginners_tutorials_generate_messages.dir/build
+.PHONY : beginners_tutorials_generate_messages/fast
 
 #=============================================================================
-# Target rules for targets named rosgraph_msgs_generate_messages_lisp
+# Target rules for targets named beginners_tutorials_generate_messages_cpp
 
 # Build rule for target.
-rosgraph_msgs_generate_messages_lisp: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 rosgraph_msgs_generate_messages_lisp
-.PHONY : rosgraph_msgs_generate_messages_lisp
+beginners_tutorials_generate_messages_cpp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 beginners_tutorials_generate_messages_cpp
+.PHONY : beginners_tutorials_generate_messages_cpp
 
 # fast build rule for target.
-rosgraph_msgs_generate_messages_lisp/fast:
-	$(MAKE) -f mouse_reader/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/build.make mouse_reader/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/build
-.PHONY : rosgraph_msgs_generate_messages_lisp/fast
+beginners_tutorials_generate_messages_cpp/fast:
+	$(MAKE) -f beginners_tutorials/CMakeFiles/beginners_tutorials_generate_messages_cpp.dir/build.make beginners_tutorials/CMakeFiles/beginners_tutorials_generate_messages_cpp.dir/build
+.PHONY : beginners_tutorials_generate_messages_cpp/fast
 
 #=============================================================================
-# Target rules for targets named rosgraph_msgs_generate_messages_py
+# Target rules for targets named beginners_tutorials_generate_messages_lisp
 
 # Build rule for target.
-rosgraph_msgs_generate_messages_py: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 rosgraph_msgs_generate_messages_py
-.PHONY : rosgraph_msgs_generate_messages_py
+beginners_tutorials_generate_messages_lisp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 beginners_tutorials_generate_messages_lisp
+.PHONY : beginners_tutorials_generate_messages_lisp
 
 # fast build rule for target.
-rosgraph_msgs_generate_messages_py/fast:
-	$(MAKE) -f mouse_reader/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/build.make mouse_reader/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/build
-.PHONY : rosgraph_msgs_generate_messages_py/fast
+beginners_tutorials_generate_messages_lisp/fast:
+	$(MAKE) -f beginners_tutorials/CMakeFiles/beginners_tutorials_generate_messages_lisp.dir/build.make beginners_tutorials/CMakeFiles/beginners_tutorials_generate_messages_lisp.dir/build
+.PHONY : beginners_tutorials_generate_messages_lisp/fast
 
 #=============================================================================
-# Target rules for targets named std_msgs_generate_messages_cpp
+# Target rules for targets named beginners_tutorials_generate_messages_py
 
 # Build rule for target.
-std_msgs_generate_messages_cpp: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 std_msgs_generate_messages_cpp
-.PHONY : std_msgs_generate_messages_cpp
+beginners_tutorials_generate_messages_py: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 beginners_tutorials_generate_messages_py
+.PHONY : beginners_tutorials_generate_messages_py
 
 # fast build rule for target.
-std_msgs_generate_messages_cpp/fast:
-	$(MAKE) -f mouse_reader/CMakeFiles/std_msgs_generate_messages_cpp.dir/build.make mouse_reader/CMakeFiles/std_msgs_generate_messages_cpp.dir/build
-.PHONY : std_msgs_generate_messages_cpp/fast
+beginners_tutorials_generate_messages_py/fast:
+	$(MAKE) -f beginners_tutorials/CMakeFiles/beginners_tutorials_generate_messages_py.dir/build.make beginners_tutorials/CMakeFiles/beginners_tutorials_generate_messages_py.dir/build
+.PHONY : beginners_tutorials_generate_messages_py/fast
 
 #=============================================================================
-# Target rules for targets named std_msgs_generate_messages_lisp
+# Target rules for targets named beginners_tutorials_genlisp
 
 # Build rule for target.
-std_msgs_generate_messages_lisp: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 std_msgs_generate_messages_lisp
-.PHONY : std_msgs_generate_messages_lisp
+beginners_tutorials_genlisp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 beginners_tutorials_genlisp
+.PHONY : beginners_tutorials_genlisp
 
 # fast build rule for target.
-std_msgs_generate_messages_lisp/fast:
-	$(MAKE) -f mouse_reader/CMakeFiles/std_msgs_generate_messages_lisp.dir/build.make mouse_reader/CMakeFiles/std_msgs_generate_messages_lisp.dir/build
-.PHONY : std_msgs_generate_messages_lisp/fast
+beginners_tutorials_genlisp/fast:
+	$(MAKE) -f beginners_tutorials/CMakeFiles/beginners_tutorials_genlisp.dir/build.make beginners_tutorials/CMakeFiles/beginners_tutorials_genlisp.dir/build
+.PHONY : beginners_tutorials_genlisp/fast
 
 #=============================================================================
-# Target rules for targets named std_msgs_generate_messages_py
+# Target rules for targets named beginners_tutorials_genpy
 
 # Build rule for target.
-std_msgs_generate_messages_py: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 std_msgs_generate_messages_py
-.PHONY : std_msgs_generate_messages_py
+beginners_tutorials_genpy: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 beginners_tutorials_genpy
+.PHONY : beginners_tutorials_genpy
 
 # fast build rule for target.
-std_msgs_generate_messages_py/fast:
-	$(MAKE) -f mouse_reader/CMakeFiles/std_msgs_generate_messages_py.dir/build.make mouse_reader/CMakeFiles/std_msgs_generate_messages_py.dir/build
-.PHONY : std_msgs_generate_messages_py/fast
+beginners_tutorials_genpy/fast:
+	$(MAKE) -f beginners_tutorials/CMakeFiles/beginners_tutorials_genpy.dir/build.make beginners_tutorials/CMakeFiles/beginners_tutorials_genpy.dir/build
+.PHONY : beginners_tutorials_genpy/fast
+
+#=============================================================================
+# Target rules for targets named mouse_reader
+
+# Build rule for target.
+mouse_reader: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 mouse_reader
+.PHONY : mouse_reader
+
+# fast build rule for target.
+mouse_reader/fast:
+	$(MAKE) -f mouse_reader/CMakeFiles/mouse_reader.dir/build.make mouse_reader/CMakeFiles/mouse_reader.dir/build
+.PHONY : mouse_reader/fast
 
 #=============================================================================
 # Target rules for targets named geometry_msgs_generate_messages_cpp
@@ -409,6 +789,19 @@ geometry_msgs_generate_messages_py/fast:
 	$(MAKE) -f pointer_visualizer/CMakeFiles/geometry_msgs_generate_messages_py.dir/build.make pointer_visualizer/CMakeFiles/geometry_msgs_generate_messages_py.dir/build
 .PHONY : geometry_msgs_generate_messages_py/fast
 
+#=============================================================================
+# Target rules for targets named pointer
+
+# Build rule for target.
+pointer: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 pointer
+.PHONY : pointer
+
+# fast build rule for target.
+pointer/fast:
+	$(MAKE) -f pointer_visualizer/CMakeFiles/pointer.dir/build.make pointer_visualizer/CMakeFiles/pointer.dir/build
+.PHONY : pointer/fast
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -429,7 +822,15 @@ help:
 	@echo "... tests"
 	@echo "... gtest"
 	@echo "... gtest_main"
-	@echo "... _catkin_empty_exported_target"
+	@echo "... _griffin_powermate_generate_messages_check_deps_PowermateEvent"
+	@echo "... griffin_powermate"
+	@echo "... griffin_powermate_gencpp"
+	@echo "... griffin_powermate_generate_messages"
+	@echo "... griffin_powermate_generate_messages_cpp"
+	@echo "... griffin_powermate_generate_messages_lisp"
+	@echo "... griffin_powermate_generate_messages_py"
+	@echo "... griffin_powermate_genlisp"
+	@echo "... griffin_powermate_genpy"
 	@echo "... roscpp_generate_messages_cpp"
 	@echo "... roscpp_generate_messages_lisp"
 	@echo "... roscpp_generate_messages_py"
@@ -439,9 +840,31 @@ help:
 	@echo "... std_msgs_generate_messages_cpp"
 	@echo "... std_msgs_generate_messages_lisp"
 	@echo "... std_msgs_generate_messages_py"
+	@echo "... _keyboard_reader_generate_messages_check_deps_Key"
+	@echo "... keyboard_event_publisher"
+	@echo "... keyboard_reader"
+	@echo "... keyboard_reader_gencpp"
+	@echo "... keyboard_reader_generate_messages"
+	@echo "... keyboard_reader_generate_messages_cpp"
+	@echo "... keyboard_reader_generate_messages_lisp"
+	@echo "... keyboard_reader_generate_messages_py"
+	@echo "... keyboard_reader_genlisp"
+	@echo "... keyboard_reader_genpy"
+	@echo "... _catkin_empty_exported_target"
+	@echo "... _beginners_tutorials_generate_messages_check_deps_AddTwoInts"
+	@echo "... _beginners_tutorials_generate_messages_check_deps_Num"
+	@echo "... beginners_tutorials_gencpp"
+	@echo "... beginners_tutorials_generate_messages"
+	@echo "... beginners_tutorials_generate_messages_cpp"
+	@echo "... beginners_tutorials_generate_messages_lisp"
+	@echo "... beginners_tutorials_generate_messages_py"
+	@echo "... beginners_tutorials_genlisp"
+	@echo "... beginners_tutorials_genpy"
+	@echo "... mouse_reader"
 	@echo "... geometry_msgs_generate_messages_cpp"
 	@echo "... geometry_msgs_generate_messages_lisp"
 	@echo "... geometry_msgs_generate_messages_py"
+	@echo "... pointer"
 .PHONY : help
 
 

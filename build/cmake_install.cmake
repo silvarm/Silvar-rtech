@@ -117,9 +117,11 @@ ENDIF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unsp
 IF(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
   INCLUDE("/home/tudeng/silvar-rtech/build/gtest/cmake_install.cmake")
+  INCLUDE("/home/tudeng/silvar-rtech/build/griffin_powermate/cmake_install.cmake")
+  INCLUDE("/home/tudeng/silvar-rtech/build/keyboard_reader/cmake_install.cmake")
   INCLUDE("/home/tudeng/silvar-rtech/build/usb_camera/cmake_install.cmake")
-  INCLUDE("/home/tudeng/silvar-rtech/build/mouse_reader/cmake_install.cmake")
   INCLUDE("/home/tudeng/silvar-rtech/build/beginners_tutorials/cmake_install.cmake")
+  INCLUDE("/home/tudeng/silvar-rtech/build/mouse_reader/cmake_install.cmake")
   INCLUDE("/home/tudeng/silvar-rtech/build/my_r2d2/cmake_install.cmake")
   INCLUDE("/home/tudeng/silvar-rtech/build/pointer_visualizer/cmake_install.cmake")
 

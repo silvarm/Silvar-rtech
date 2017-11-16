@@ -91,9 +91,9 @@ endif()
 # flag project as catkin-based to distinguish if a find_package()-ed project is a catkin project
 set(beginners_tutorials_FOUND_CATKIN_PROJECT TRUE)
 
-if(NOT " " STREQUAL " ")
+if(NOT "include " STREQUAL " ")
   set(beginners_tutorials_INCLUDE_DIRS "")
-  set(_include_dirs "")
+  set(_include_dirs "include")
   foreach(idir ${_include_dirs})
     if(IS_ABSOLUTE ${idir} AND IS_DIRECTORY ${idir})
       set(include ${idir})
@@ -122,7 +122,7 @@ foreach(library ${libraries})
     set(lib_path "")
     set(lib "${library}-NOTFOUND")
     # since the path where the library is found is returned we have to iterate over the paths manually
-    foreach(path /home/tudeng/silvar-rtech/install/lib;/opt/ros/indigo/lib)
+    foreach(path /home/tudeng/silvar-rtech/install/lib;/home/tudeng/silvar-rtech/devel/lib;/opt/ros/indigo/lib)
       find_library(lib ${library}
         PATHS ${path}
         NO_DEFAULT_PATH NO_CMAKE_FIND_ROOT_PATH)
@@ -145,7 +145,7 @@ foreach(library ${libraries})
   endif()
 endforeach()
 
-set(beginners_tutorials_EXPORTED_TARGETS "")
+set(beginners_tutorials_EXPORTED_TARGETS "beginners_tutorials_generate_messages_cpp;beginners_tutorials_generate_messages_lisp;beginners_tutorials_generate_messages_py")
 # create dummy targets for exported code generation targets to make life of users easier
 foreach(t ${beginners_tutorials_EXPORTED_TARGETS})
   if(NOT TARGET ${t})
@@ -182,7 +182,7 @@ foreach(depend ${depends})
   list(APPEND beginners_tutorials_EXPORTED_TARGETS ${${beginners_tutorials_dep}_EXPORTED_TARGETS})
 endforeach()
 
-set(pkg_cfg_extras "")
+set(pkg_cfg_extras "beginners_tutorials-msg-extras.cmake")
 foreach(extra ${pkg_cfg_extras})
   if(NOT IS_ABSOLUTE ${extra})
     set(extra ${beginners_tutorials_DIR}/${extra})

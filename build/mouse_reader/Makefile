@@ -38,6 +38,9 @@ RM = /usr/bin/cmake -E remove -f
 # Escaping for special characters.
 EQUALS = =
 
+# The program to use to edit the cache.
+CMAKE_EDIT_COMMAND = /usr/bin/cmake-gui
+
 # The top-level source directory on which CMake was run.
 CMAKE_SOURCE_DIR = /home/tudeng/silvar-rtech/src
 
@@ -49,8 +52,8 @@ CMAKE_BINARY_DIR = /home/tudeng/silvar-rtech/build
 
 # Special rule for the target edit_cache
 edit_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running interactive CMake command-line interface..."
-	/usr/bin/cmake -i .
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake cache editor..."
+	/usr/bin/cmake-gui -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : edit_cache
 
 # Special rule for the target edit_cache
@@ -150,130 +153,42 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
-mouse_reader/CMakeFiles/roscpp_generate_messages_cpp.dir/rule:
-	cd /home/tudeng/silvar-rtech/build && $(MAKE) -f CMakeFiles/Makefile2 mouse_reader/CMakeFiles/roscpp_generate_messages_cpp.dir/rule
-.PHONY : mouse_reader/CMakeFiles/roscpp_generate_messages_cpp.dir/rule
+mouse_reader/CMakeFiles/mouse_reader.dir/rule:
+	cd /home/tudeng/silvar-rtech/build && $(MAKE) -f CMakeFiles/Makefile2 mouse_reader/CMakeFiles/mouse_reader.dir/rule
+.PHONY : mouse_reader/CMakeFiles/mouse_reader.dir/rule
 
 # Convenience name for target.
-roscpp_generate_messages_cpp: mouse_reader/CMakeFiles/roscpp_generate_messages_cpp.dir/rule
-.PHONY : roscpp_generate_messages_cpp
+mouse_reader: mouse_reader/CMakeFiles/mouse_reader.dir/rule
+.PHONY : mouse_reader
 
 # fast build rule for target.
-roscpp_generate_messages_cpp/fast:
-	cd /home/tudeng/silvar-rtech/build && $(MAKE) -f mouse_reader/CMakeFiles/roscpp_generate_messages_cpp.dir/build.make mouse_reader/CMakeFiles/roscpp_generate_messages_cpp.dir/build
-.PHONY : roscpp_generate_messages_cpp/fast
+mouse_reader/fast:
+	cd /home/tudeng/silvar-rtech/build && $(MAKE) -f mouse_reader/CMakeFiles/mouse_reader.dir/build.make mouse_reader/CMakeFiles/mouse_reader.dir/build
+.PHONY : mouse_reader/fast
 
-# Convenience name for target.
-mouse_reader/CMakeFiles/roscpp_generate_messages_lisp.dir/rule:
-	cd /home/tudeng/silvar-rtech/build && $(MAKE) -f CMakeFiles/Makefile2 mouse_reader/CMakeFiles/roscpp_generate_messages_lisp.dir/rule
-.PHONY : mouse_reader/CMakeFiles/roscpp_generate_messages_lisp.dir/rule
+src/mouse_reader.o: src/mouse_reader.cpp.o
+.PHONY : src/mouse_reader.o
 
-# Convenience name for target.
-roscpp_generate_messages_lisp: mouse_reader/CMakeFiles/roscpp_generate_messages_lisp.dir/rule
-.PHONY : roscpp_generate_messages_lisp
+# target to build an object file
+src/mouse_reader.cpp.o:
+	cd /home/tudeng/silvar-rtech/build && $(MAKE) -f mouse_reader/CMakeFiles/mouse_reader.dir/build.make mouse_reader/CMakeFiles/mouse_reader.dir/src/mouse_reader.cpp.o
+.PHONY : src/mouse_reader.cpp.o
 
-# fast build rule for target.
-roscpp_generate_messages_lisp/fast:
-	cd /home/tudeng/silvar-rtech/build && $(MAKE) -f mouse_reader/CMakeFiles/roscpp_generate_messages_lisp.dir/build.make mouse_reader/CMakeFiles/roscpp_generate_messages_lisp.dir/build
-.PHONY : roscpp_generate_messages_lisp/fast
+src/mouse_reader.i: src/mouse_reader.cpp.i
+.PHONY : src/mouse_reader.i
 
-# Convenience name for target.
-mouse_reader/CMakeFiles/roscpp_generate_messages_py.dir/rule:
-	cd /home/tudeng/silvar-rtech/build && $(MAKE) -f CMakeFiles/Makefile2 mouse_reader/CMakeFiles/roscpp_generate_messages_py.dir/rule
-.PHONY : mouse_reader/CMakeFiles/roscpp_generate_messages_py.dir/rule
+# target to preprocess a source file
+src/mouse_reader.cpp.i:
+	cd /home/tudeng/silvar-rtech/build && $(MAKE) -f mouse_reader/CMakeFiles/mouse_reader.dir/build.make mouse_reader/CMakeFiles/mouse_reader.dir/src/mouse_reader.cpp.i
+.PHONY : src/mouse_reader.cpp.i
 
-# Convenience name for target.
-roscpp_generate_messages_py: mouse_reader/CMakeFiles/roscpp_generate_messages_py.dir/rule
-.PHONY : roscpp_generate_messages_py
+src/mouse_reader.s: src/mouse_reader.cpp.s
+.PHONY : src/mouse_reader.s
 
-# fast build rule for target.
-roscpp_generate_messages_py/fast:
-	cd /home/tudeng/silvar-rtech/build && $(MAKE) -f mouse_reader/CMakeFiles/roscpp_generate_messages_py.dir/build.make mouse_reader/CMakeFiles/roscpp_generate_messages_py.dir/build
-.PHONY : roscpp_generate_messages_py/fast
-
-# Convenience name for target.
-mouse_reader/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/rule:
-	cd /home/tudeng/silvar-rtech/build && $(MAKE) -f CMakeFiles/Makefile2 mouse_reader/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/rule
-.PHONY : mouse_reader/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/rule
-
-# Convenience name for target.
-rosgraph_msgs_generate_messages_cpp: mouse_reader/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/rule
-.PHONY : rosgraph_msgs_generate_messages_cpp
-
-# fast build rule for target.
-rosgraph_msgs_generate_messages_cpp/fast:
-	cd /home/tudeng/silvar-rtech/build && $(MAKE) -f mouse_reader/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/build.make mouse_reader/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/build
-.PHONY : rosgraph_msgs_generate_messages_cpp/fast
-
-# Convenience name for target.
-mouse_reader/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/rule:
-	cd /home/tudeng/silvar-rtech/build && $(MAKE) -f CMakeFiles/Makefile2 mouse_reader/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/rule
-.PHONY : mouse_reader/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/rule
-
-# Convenience name for target.
-rosgraph_msgs_generate_messages_lisp: mouse_reader/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/rule
-.PHONY : rosgraph_msgs_generate_messages_lisp
-
-# fast build rule for target.
-rosgraph_msgs_generate_messages_lisp/fast:
-	cd /home/tudeng/silvar-rtech/build && $(MAKE) -f mouse_reader/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/build.make mouse_reader/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/build
-.PHONY : rosgraph_msgs_generate_messages_lisp/fast
-
-# Convenience name for target.
-mouse_reader/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/rule:
-	cd /home/tudeng/silvar-rtech/build && $(MAKE) -f CMakeFiles/Makefile2 mouse_reader/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/rule
-.PHONY : mouse_reader/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/rule
-
-# Convenience name for target.
-rosgraph_msgs_generate_messages_py: mouse_reader/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/rule
-.PHONY : rosgraph_msgs_generate_messages_py
-
-# fast build rule for target.
-rosgraph_msgs_generate_messages_py/fast:
-	cd /home/tudeng/silvar-rtech/build && $(MAKE) -f mouse_reader/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/build.make mouse_reader/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/build
-.PHONY : rosgraph_msgs_generate_messages_py/fast
-
-# Convenience name for target.
-mouse_reader/CMakeFiles/std_msgs_generate_messages_cpp.dir/rule:
-	cd /home/tudeng/silvar-rtech/build && $(MAKE) -f CMakeFiles/Makefile2 mouse_reader/CMakeFiles/std_msgs_generate_messages_cpp.dir/rule
-.PHONY : mouse_reader/CMakeFiles/std_msgs_generate_messages_cpp.dir/rule
-
-# Convenience name for target.
-std_msgs_generate_messages_cpp: mouse_reader/CMakeFiles/std_msgs_generate_messages_cpp.dir/rule
-.PHONY : std_msgs_generate_messages_cpp
-
-# fast build rule for target.
-std_msgs_generate_messages_cpp/fast:
-	cd /home/tudeng/silvar-rtech/build && $(MAKE) -f mouse_reader/CMakeFiles/std_msgs_generate_messages_cpp.dir/build.make mouse_reader/CMakeFiles/std_msgs_generate_messages_cpp.dir/build
-.PHONY : std_msgs_generate_messages_cpp/fast
-
-# Convenience name for target.
-mouse_reader/CMakeFiles/std_msgs_generate_messages_lisp.dir/rule:
-	cd /home/tudeng/silvar-rtech/build && $(MAKE) -f CMakeFiles/Makefile2 mouse_reader/CMakeFiles/std_msgs_generate_messages_lisp.dir/rule
-.PHONY : mouse_reader/CMakeFiles/std_msgs_generate_messages_lisp.dir/rule
-
-# Convenience name for target.
-std_msgs_generate_messages_lisp: mouse_reader/CMakeFiles/std_msgs_generate_messages_lisp.dir/rule
-.PHONY : std_msgs_generate_messages_lisp
-
-# fast build rule for target.
-std_msgs_generate_messages_lisp/fast:
-	cd /home/tudeng/silvar-rtech/build && $(MAKE) -f mouse_reader/CMakeFiles/std_msgs_generate_messages_lisp.dir/build.make mouse_reader/CMakeFiles/std_msgs_generate_messages_lisp.dir/build
-.PHONY : std_msgs_generate_messages_lisp/fast
-
-# Convenience name for target.
-mouse_reader/CMakeFiles/std_msgs_generate_messages_py.dir/rule:
-	cd /home/tudeng/silvar-rtech/build && $(MAKE) -f CMakeFiles/Makefile2 mouse_reader/CMakeFiles/std_msgs_generate_messages_py.dir/rule
-.PHONY : mouse_reader/CMakeFiles/std_msgs_generate_messages_py.dir/rule
-
-# Convenience name for target.
-std_msgs_generate_messages_py: mouse_reader/CMakeFiles/std_msgs_generate_messages_py.dir/rule
-.PHONY : std_msgs_generate_messages_py
-
-# fast build rule for target.
-std_msgs_generate_messages_py/fast:
-	cd /home/tudeng/silvar-rtech/build && $(MAKE) -f mouse_reader/CMakeFiles/std_msgs_generate_messages_py.dir/build.make mouse_reader/CMakeFiles/std_msgs_generate_messages_py.dir/build
-.PHONY : std_msgs_generate_messages_py/fast
+# target to generate assembly for a file
+src/mouse_reader.cpp.s:
+	cd /home/tudeng/silvar-rtech/build && $(MAKE) -f mouse_reader/CMakeFiles/mouse_reader.dir/build.make mouse_reader/CMakeFiles/mouse_reader.dir/src/mouse_reader.cpp.s
+.PHONY : src/mouse_reader.cpp.s
 
 # Help Target
 help:
@@ -286,17 +201,12 @@ help:
 	@echo "... install/local"
 	@echo "... install/strip"
 	@echo "... list_install_components"
+	@echo "... mouse_reader"
 	@echo "... rebuild_cache"
-	@echo "... roscpp_generate_messages_cpp"
-	@echo "... roscpp_generate_messages_lisp"
-	@echo "... roscpp_generate_messages_py"
-	@echo "... rosgraph_msgs_generate_messages_cpp"
-	@echo "... rosgraph_msgs_generate_messages_lisp"
-	@echo "... rosgraph_msgs_generate_messages_py"
-	@echo "... std_msgs_generate_messages_cpp"
-	@echo "... std_msgs_generate_messages_lisp"
-	@echo "... std_msgs_generate_messages_py"
 	@echo "... test"
+	@echo "... src/mouse_reader.o"
+	@echo "... src/mouse_reader.i"
+	@echo "... src/mouse_reader.s"
 .PHONY : help
 
 

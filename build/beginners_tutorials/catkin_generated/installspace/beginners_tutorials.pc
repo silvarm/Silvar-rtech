@@ -3,6 +3,6 @@ prefix=/home/tudeng/silvar-rtech/install
 Name: beginners_tutorials
 Description: Description of beginners_tutorials
 Version: 0.0.0
-Cflags: 
+Cflags: -I/home/tudeng/silvar-rtech/install/include
 Libs: -L/home/tudeng/silvar-rtech/install/lib 
 Requires: 

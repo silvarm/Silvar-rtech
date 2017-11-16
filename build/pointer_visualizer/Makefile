@@ -38,6 +38,9 @@ RM = /usr/bin/cmake -E remove -f
 # Escaping for special characters.
 EQUALS = =
 
+# The program to use to edit the cache.
+CMAKE_EDIT_COMMAND = /usr/bin/cmake-gui
+
 # The top-level source directory on which CMake was run.
 CMAKE_SOURCE_DIR = /home/tudeng/silvar-rtech/src
 
@@ -49,8 +52,8 @@ CMAKE_BINARY_DIR = /home/tudeng/silvar-rtech/build
 
 # Special rule for the target edit_cache
 edit_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running interactive CMake command-line interface..."
-	/usr/bin/cmake -i .
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake cache editor..."
+	/usr/bin/cmake-gui -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : edit_cache
 
 # Special rule for the target edit_cache
@@ -191,6 +194,44 @@ geometry_msgs_generate_messages_py/fast:
 	cd /home/tudeng/silvar-rtech/build && $(MAKE) -f pointer_visualizer/CMakeFiles/geometry_msgs_generate_messages_py.dir/build.make pointer_visualizer/CMakeFiles/geometry_msgs_generate_messages_py.dir/build
 .PHONY : geometry_msgs_generate_messages_py/fast
 
+# Convenience name for target.
+pointer_visualizer/CMakeFiles/pointer.dir/rule:
+	cd /home/tudeng/silvar-rtech/build && $(MAKE) -f CMakeFiles/Makefile2 pointer_visualizer/CMakeFiles/pointer.dir/rule
+.PHONY : pointer_visualizer/CMakeFiles/pointer.dir/rule
+
+# Convenience name for target.
+pointer: pointer_visualizer/CMakeFiles/pointer.dir/rule
+.PHONY : pointer
+
+# fast build rule for target.
+pointer/fast:
+	cd /home/tudeng/silvar-rtech/build && $(MAKE) -f pointer_visualizer/CMakeFiles/pointer.dir/build.make pointer_visualizer/CMakeFiles/pointer.dir/build
+.PHONY : pointer/fast
+
+src/pointer.o: src/pointer.cpp.o
+.PHONY : src/pointer.o
+
+# target to build an object file
+src/pointer.cpp.o:
+	cd /home/tudeng/silvar-rtech/build && $(MAKE) -f pointer_visualizer/CMakeFiles/pointer.dir/build.make pointer_visualizer/CMakeFiles/pointer.dir/src/pointer.cpp.o
+.PHONY : src/pointer.cpp.o
+
+src/pointer.i: src/pointer.cpp.i
+.PHONY : src/pointer.i
+
+# target to preprocess a source file
+src/pointer.cpp.i:
+	cd /home/tudeng/silvar-rtech/build && $(MAKE) -f pointer_visualizer/CMakeFiles/pointer.dir/build.make pointer_visualizer/CMakeFiles/pointer.dir/src/pointer.cpp.i
+.PHONY : src/pointer.cpp.i
+
+src/pointer.s: src/pointer.cpp.s
+.PHONY : src/pointer.s
+
+# target to generate assembly for a file
+src/pointer.cpp.s:
+	cd /home/tudeng/silvar-rtech/build && $(MAKE) -f pointer_visualizer/CMakeFiles/pointer.dir/build.make pointer_visualizer/CMakeFiles/pointer.dir/src/pointer.cpp.s
+.PHONY : src/pointer.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -205,8 +246,12 @@ help:
 	@echo "... install/local"
 	@echo "... install/strip"
 	@echo "... list_install_components"
+	@echo "... pointer"
 	@echo "... rebuild_cache"
 	@echo "... test"
+	@echo "... src/pointer.o"
+	@echo "... src/pointer.i"
+	@echo "... src/pointer.s"
 .PHONY : help
 
 

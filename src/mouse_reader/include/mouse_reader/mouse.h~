@@ -1,0 +1,49 @@
+#include <linux/input.h>
+#include <string.h>
+#include <stdio.h>
+#include <unistd.h>
+#include <fcntl.h>
+#include <sstream>
+#include "ros/ros.h"
+#include <iostream>
+#include <fstream>
+//#include <mouse.msg>
+
+class Mouse
+{
+    int bytes;
+
+    unsigned char data[3];
+    signed char x, y;
+    int left;
+
+    //int8_t pos[5] = {0,0,0,0,0};
+	
+    const char *pDevice = "/dev/input/event4";
+
+    
+    // Open Mouse
+    int fd = open(pDevice, O_RDWR);
+
+
+/*
+    while(ros::ok())
+    {*/
+        // Read Mouse     
+        bytes = read(fd, data, sizeof(data));
+
+        if(bytes > 0)
+        {
+            left = data[0] & 0x1;
+            x = data[1];
+            y = data[2];
+
+            printf("x=%d, y=%d, left=%d", x, y, left);
+	}
+	mouse_reader::Mouse mouse_msg;
+	//char mouse_msg;
+	mouse_msg.x = x;
+	mouse_msg.y = y;
+	mouse_msg.left = left;
+	
+}

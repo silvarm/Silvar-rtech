@@ -5,8 +5,10 @@
 # This file includes the relevant testing commands required for 
 # testing this directory and lists subdirectories to be tested as well.
 SUBDIRS(gtest)
+SUBDIRS(griffin_powermate)
+SUBDIRS(keyboard_reader)
 SUBDIRS(usb_camera)
-SUBDIRS(mouse_reader)
 SUBDIRS(beginners_tutorials)
+SUBDIRS(mouse_reader)
 SUBDIRS(my_r2d2)
 SUBDIRS(pointer_visualizer)
