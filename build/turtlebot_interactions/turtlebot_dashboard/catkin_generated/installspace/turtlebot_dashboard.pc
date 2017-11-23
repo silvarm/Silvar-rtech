@@ -1,0 +1,8 @@
+prefix=/home/tudeng/silvar-rtech/install
+
+Name: turtlebot_dashboard
+Description: Description of turtlebot_dashboard
+Version: 2.3.1
+Cflags: 
+Libs: -L/home/tudeng/silvar-rtech/install/lib 
+Requires: 

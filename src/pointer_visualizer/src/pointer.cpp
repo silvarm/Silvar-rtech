@@ -1,26 +1,23 @@
 #include "ros/ros.h"
-#include <sstream>
-#include <tf/transform_broadcaster.h>
-#include <geometry_msgs/Twist.h>
-#include <stdlib.h>
-#include <time.h>
+#include "std_msgs/String.h"
 #include "geometry_msgs/PointStamped.h"
-///#include "mouse_reader/mouse.h"
-//#include "std_msgs/Header.msg"
-//#include <geometry_msgs/Point.msg>
+#include "geometry_msgs/Point32.h"
+#include <sstream>
+#include <iostream>
 
+using namespace std;
+float x;
+float y;
+float z;
 
-/*
-void mouseCB(const mouse_reader::Mouse msg)
+void mouseCallback(const geometry_msgs::Point32 mouse_msg) 
 {
-points.point.x = msg.x;
-points.point.y = msg.y;
-points.point.z = 0.0;
-points.header.frame_id = "odom";
-}
-*/
+  x = mouse_msg.x;
+  y = mouse_msg.y;
+  z = mouse_msg.z;
 
-geometry_msgs::PointStamped points;
+}
+
 
 int main(int argc, char **argv)
 {
@@ -29,51 +26,35 @@ int main(int argc, char **argv)
 
   ros::NodeHandle n;
 
-  ros::Subscriber Mouse_pub = n.subscribe("mouse_msg", 1000);
+  ros::Subscriber Mouse_pub = n.subscribe("mouse_msg", 1, mouseCallback);
 
-  ros::Publisher point_pub = n.advertise<geometry_msgs/PointStamped.msg>("mouse_msg", 1000);
+  ros::Publisher point_pub = n.advertise<geometry_msgs::PointStamped>("XYZ_position2", 1);
   
   ros::Rate loop_rate(10);
-}
+
+geometry_msgs::PointStamped point;
+
+int count = 0;
 
 while(ros::ok())
-{
-point_pub.publish(points);
+	{
+
+
+point.header.seq = count;
+point.header.frame_id = "odom";
+point.point.x = -x/10;
+point.point.y = y/10;
+point.point.z = 0.0;
+
+cout << "x on: "<< point.point.x ;
+cout << "    y on: "<< point.point.y << endl;	
+
+
+point_pub.publish(point);
 ros::spinOnce();
 loop_rate.sleep();
+count++;
 
+	}
 }
-
-/*
-  double x = 0.0;
-  double y = 0.0;
-
-  ros::Time current_time, last_time;
-  current_time = ros::Time::now();
-  last_time = ros::Time::now();
-
-  int count = 0;
-
-  for( x = 0; x < 120; x = x + 1 ) {
-  for( y = 0; y < 120; y = y + 1 ) {
-  while (ros::ok())
-  {
-    geometry_msgs::Point x_msg;
-    geometry_msgs::Point y_msg;
-
-    std::stringstream x;
-    x << "x" << count;
-    std::stringstream y;
-    x << "y" << count;
-
-    x_msg.data = x.str();
-    y_msg.data = y.str();
-    ROS_INFO("%s", x_msg.data.c_str());
-    ROS_INFO("%s", y_msg.data.c_str());
-    x_pub.publish(x_msg)
-    y_pub.publish(y_msg)
-    ros::spinOnce();
-    loop_rate.sleep();
-    ++count;
-*/
 

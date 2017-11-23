@@ -7,10 +7,12 @@ set(CMAKE_CXX_FLAGS "-std=c++11")
 ## if COMPONENTS list like find_package(catkin REQUIRED COMPONENTS xyz)
 ## is used, also find other catkin packages
 find_package(catkin REQUIRED COMPONENTS
+geometry_msgs
 	roscpp
 	rospy
 	std_msgs
-	message_generation)
+
+)
 # add_message_files(FILES mouse.msg))
 
 ## Generate services in the 'srv' folder
@@ -42,7 +44,7 @@ find_package(catkin REQUIRED COMPONENTS
 
 ## Specify additional locations of header files
 ## Your package locations should be listed before other locations
-
+catkin_package()
 
 ## Declare a C++ library
 # add_library(${PROJECT_NAME}
@@ -74,6 +76,6 @@ find_package(catkin REQUIRED COMPONENTS
 #   ${catkin_LIBRARIES}
 # )
 include_directories(include ${catkin_INCLUDE_DIRS})
-add_executable(mouse_reader src/mouse_reader.cpp)
-target_link_libraries(mouse_reader ${catkin_LIBRARIES})
+add_executable(mouse_read src/mouse_reader.cpp)
+target_link_libraries(mouse_read ${catkin_LIBRARIES})
 

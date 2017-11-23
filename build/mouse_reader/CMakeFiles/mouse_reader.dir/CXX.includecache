@@ -6,29 +6,11 @@
 
 #IncludeRegexTransform: 
 
-/home/tudeng/silvar-rtech/src/mouse_reader/include/mouse_reader/mouse.h
+/home/tudeng/silvar-rtech/src/mouse_reader/src/mouse_reader.cpp
+ros/ros.h
+/home/tudeng/silvar-rtech/src/mouse_reader/src/ros/ros.h
 linux/input.h
 -
-string.h
--
-stdio.h
--
-unistd.h
--
-fcntl.h
--
-sstream
--
-ros/ros.h
-/home/tudeng/silvar-rtech/src/mouse_reader/include/mouse_reader/ros/ros.h
-iostream
--
-fstream
--
-
-/home/tudeng/silvar-rtech/src/mouse_reader/src/mouse_reader.cpp
-mouse_reader/mouse.h
-/home/tudeng/silvar-rtech/src/mouse_reader/src/mouse_reader/mouse.h
 stdio.h
 -
 unistd.h
@@ -37,14 +19,16 @@ fcntl.h
 -
 time.h
 -
-ros/ros.h
-/home/tudeng/silvar-rtech/src/mouse_reader/src/ros/ros.h
 cstdlib
 -
 tuple
 -
+geometry_msgs/Point32.h
+/home/tudeng/silvar-rtech/src/mouse_reader/src/geometry_msgs/Point32.h
 std_msgs/String.h
 /home/tudeng/silvar-rtech/src/mouse_reader/src/std_msgs/String.h
+string
+-
 
 /opt/ros/indigo/include/XmlRpcDecl.h
 ros/macros.h
@@ -60,6 +44,22 @@ string
 vector
 -
 time.h
+-
+
+/opt/ros/indigo/include/geometry_msgs/Point32.h
+string
+-
+vector
+-
+map
+-
+ros/types.h
+-
+ros/serialization.h
+-
+ros/builtin_message_traits.h
+-
+ros/message_operations.h
 -
 
 /opt/ros/indigo/include/ros/advertise_options.h

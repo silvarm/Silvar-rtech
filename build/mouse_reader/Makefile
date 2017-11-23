@@ -153,25 +153,67 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
-mouse_reader/CMakeFiles/mouse_reader.dir/rule:
-	cd /home/tudeng/silvar-rtech/build && $(MAKE) -f CMakeFiles/Makefile2 mouse_reader/CMakeFiles/mouse_reader.dir/rule
-.PHONY : mouse_reader/CMakeFiles/mouse_reader.dir/rule
+mouse_reader/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/rule:
+	cd /home/tudeng/silvar-rtech/build && $(MAKE) -f CMakeFiles/Makefile2 mouse_reader/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/rule
+.PHONY : mouse_reader/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/rule
 
 # Convenience name for target.
-mouse_reader: mouse_reader/CMakeFiles/mouse_reader.dir/rule
-.PHONY : mouse_reader
+geometry_msgs_generate_messages_cpp: mouse_reader/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/rule
+.PHONY : geometry_msgs_generate_messages_cpp
 
 # fast build rule for target.
-mouse_reader/fast:
-	cd /home/tudeng/silvar-rtech/build && $(MAKE) -f mouse_reader/CMakeFiles/mouse_reader.dir/build.make mouse_reader/CMakeFiles/mouse_reader.dir/build
-.PHONY : mouse_reader/fast
+geometry_msgs_generate_messages_cpp/fast:
+	cd /home/tudeng/silvar-rtech/build && $(MAKE) -f mouse_reader/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/build.make mouse_reader/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/build
+.PHONY : geometry_msgs_generate_messages_cpp/fast
+
+# Convenience name for target.
+mouse_reader/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/rule:
+	cd /home/tudeng/silvar-rtech/build && $(MAKE) -f CMakeFiles/Makefile2 mouse_reader/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/rule
+.PHONY : mouse_reader/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/rule
+
+# Convenience name for target.
+geometry_msgs_generate_messages_lisp: mouse_reader/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/rule
+.PHONY : geometry_msgs_generate_messages_lisp
+
+# fast build rule for target.
+geometry_msgs_generate_messages_lisp/fast:
+	cd /home/tudeng/silvar-rtech/build && $(MAKE) -f mouse_reader/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/build.make mouse_reader/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/build
+.PHONY : geometry_msgs_generate_messages_lisp/fast
+
+# Convenience name for target.
+mouse_reader/CMakeFiles/geometry_msgs_generate_messages_py.dir/rule:
+	cd /home/tudeng/silvar-rtech/build && $(MAKE) -f CMakeFiles/Makefile2 mouse_reader/CMakeFiles/geometry_msgs_generate_messages_py.dir/rule
+.PHONY : mouse_reader/CMakeFiles/geometry_msgs_generate_messages_py.dir/rule
+
+# Convenience name for target.
+geometry_msgs_generate_messages_py: mouse_reader/CMakeFiles/geometry_msgs_generate_messages_py.dir/rule
+.PHONY : geometry_msgs_generate_messages_py
+
+# fast build rule for target.
+geometry_msgs_generate_messages_py/fast:
+	cd /home/tudeng/silvar-rtech/build && $(MAKE) -f mouse_reader/CMakeFiles/geometry_msgs_generate_messages_py.dir/build.make mouse_reader/CMakeFiles/geometry_msgs_generate_messages_py.dir/build
+.PHONY : geometry_msgs_generate_messages_py/fast
+
+# Convenience name for target.
+mouse_reader/CMakeFiles/mouse_read.dir/rule:
+	cd /home/tudeng/silvar-rtech/build && $(MAKE) -f CMakeFiles/Makefile2 mouse_reader/CMakeFiles/mouse_read.dir/rule
+.PHONY : mouse_reader/CMakeFiles/mouse_read.dir/rule
+
+# Convenience name for target.
+mouse_read: mouse_reader/CMakeFiles/mouse_read.dir/rule
+.PHONY : mouse_read
+
+# fast build rule for target.
+mouse_read/fast:
+	cd /home/tudeng/silvar-rtech/build && $(MAKE) -f mouse_reader/CMakeFiles/mouse_read.dir/build.make mouse_reader/CMakeFiles/mouse_read.dir/build
+.PHONY : mouse_read/fast
 
 src/mouse_reader.o: src/mouse_reader.cpp.o
 .PHONY : src/mouse_reader.o
 
 # target to build an object file
 src/mouse_reader.cpp.o:
-	cd /home/tudeng/silvar-rtech/build && $(MAKE) -f mouse_reader/CMakeFiles/mouse_reader.dir/build.make mouse_reader/CMakeFiles/mouse_reader.dir/src/mouse_reader.cpp.o
+	cd /home/tudeng/silvar-rtech/build && $(MAKE) -f mouse_reader/CMakeFiles/mouse_read.dir/build.make mouse_reader/CMakeFiles/mouse_read.dir/src/mouse_reader.cpp.o
 .PHONY : src/mouse_reader.cpp.o
 
 src/mouse_reader.i: src/mouse_reader.cpp.i
@@ -179,7 +221,7 @@ src/mouse_reader.i: src/mouse_reader.cpp.i
 
 # target to preprocess a source file
 src/mouse_reader.cpp.i:
-	cd /home/tudeng/silvar-rtech/build && $(MAKE) -f mouse_reader/CMakeFiles/mouse_reader.dir/build.make mouse_reader/CMakeFiles/mouse_reader.dir/src/mouse_reader.cpp.i
+	cd /home/tudeng/silvar-rtech/build && $(MAKE) -f mouse_reader/CMakeFiles/mouse_read.dir/build.make mouse_reader/CMakeFiles/mouse_read.dir/src/mouse_reader.cpp.i
 .PHONY : src/mouse_reader.cpp.i
 
 src/mouse_reader.s: src/mouse_reader.cpp.s
@@ -187,7 +229,7 @@ src/mouse_reader.s: src/mouse_reader.cpp.s
 
 # target to generate assembly for a file
 src/mouse_reader.cpp.s:
-	cd /home/tudeng/silvar-rtech/build && $(MAKE) -f mouse_reader/CMakeFiles/mouse_reader.dir/build.make mouse_reader/CMakeFiles/mouse_reader.dir/src/mouse_reader.cpp.s
+	cd /home/tudeng/silvar-rtech/build && $(MAKE) -f mouse_reader/CMakeFiles/mouse_read.dir/build.make mouse_reader/CMakeFiles/mouse_read.dir/src/mouse_reader.cpp.s
 .PHONY : src/mouse_reader.cpp.s
 
 # Help Target
@@ -197,11 +239,14 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... edit_cache"
+	@echo "... geometry_msgs_generate_messages_cpp"
+	@echo "... geometry_msgs_generate_messages_lisp"
+	@echo "... geometry_msgs_generate_messages_py"
 	@echo "... install"
 	@echo "... install/local"
 	@echo "... install/strip"
 	@echo "... list_install_components"
-	@echo "... mouse_reader"
+	@echo "... mouse_read"
 	@echo "... rebuild_cache"
 	@echo "... test"
 	@echo "... src/mouse_reader.o"

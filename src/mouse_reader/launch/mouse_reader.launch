@@ -4,5 +4,5 @@
 
 	<node pkg="pointer_visualizer" type="pointer" name="pointer"/>
 
-	<node pkg="mouse_reader" type="mouse_reader" name="mouse_reader"/>
+	<node pkg="mouse_reader" type="mouse_read" name="mouse_read"/>
 </launch>

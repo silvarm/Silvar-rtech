@@ -1,61 +1,85 @@
-#include "mouse_reader/mouse.h"
+#include <cstdlib>
+#include <istream>
+#include <iostream>
+#include <fstream>
+#include "ros/ros.h"
+#include "geometry_msgs/Point32.h"
+#include <linux/input.h>
+#include <string.h>
+#include <map>
+#include <vector>
+#include <errno.h>
 #include <stdio.h>
 #include <unistd.h>
 #include <fcntl.h>
-#include <time.h>
-#include "ros/ros.h"
-#include <cstdlib>
-#include <tuple>
-#include "std_msgs/String.h"
+#include <glob.h>
+#include <sstream>
 
-
-
-	
-    const char *pDevice = "/dev/input/event4";
-
-    
-    // Open Mouse
-    int fd = open(pDevice, O_RDWR);
-
-
-
-/*
-    while(ros::ok())
-    {*/
-        // Read Mouse     
-        bytes = read(fd, data, sizeof(data));
-
-        if(bytes > 0)
-        {
-            left = data[0] & 0x1;
-            x = data[1];
-            y = data[2];
-
-            printf("x=%d, y=%d, left=%d", x, y, left);
-	}
-	mouse_reader::Mouse mouse_msg;
-	//char mouse_msg;
-	mouse_msg.x = x;
-	mouse_msg.y = y;
-	mouse_msg.left = left;
+using namespace std;
 
 int main(int argc, char** argv)
 {
 
-    ros::init(argc, argv, "mouse_reader");
-    ros::NodeHandle n;
-    
-    ros::Publisher Mouse_pub = n.advertise<mouse_reader::Mouse> ("mouse_msg",1000);
-    ros::Rate loop_rate(10);
+ros::init(argc, argv, "mouse_reader");
+ros::NodeHandle n;
+ros::Publisher Mouse_pub = n.advertise<geometry_msgs::Point32> ("mouse_msg",1);
+ros::Rate loop_rate(10);
+geometry_msgs::Point32 mouse_msg;
 
-	while(ros::ok())
+
+float x = 0.0;
+float y = 0.0;
+int newdata;
+
+int fd = open("/dev/input/event4", O_RDONLY);
+struct input_event ibuffer[64];
+int bytes;
+while(ros::ok())
     {
-	Mouse_pub.publish(mouse_msg);
-	ros::spinOnce();
-	loop_rate.sleep();
+        // Read Mouse     
+        bytes = read(fd, ibuffer, sizeof(struct input_event) * 64);
+	//cout << "Bytesid on: "<< bytes << endl;
+
+        if(bytes > 0)
+        {
+	    newdata = bytes/sizeof(struct input_event);
+	   // printf("newdata on: %i\n", newdata);
+
+        for(int i=0; i<newdata; i++)
+	{
+	switch(ibuffer[i].type)				
+          {
+            case EV_MSC:				
+              printf("nupu vajutus\n");
+              break;
+            case EV_REL:
+
+              if (ibuffer[i].code == 0) 
+		{
+
+		//printf(ibuffer[i].value);
+
+                x += ibuffer[i].value;
+		}
+              if (ibuffer[i].code == 1) 
+		{
+
+		//printf(ibuffer[i].value);
+
+               y += ibuffer[i].value;
+		}
+
+		printf("x=%f, y=%f\n", x, y);
+
+		break;
+	  }
+     		mouse_msg.x = x;
+		mouse_msg.y = y;
+		mouse_msg.z = 0;
+		Mouse_pub.publish(mouse_msg);
 	}
-    
+        }    
+ }
+
     return 0; 
 }
-
-
