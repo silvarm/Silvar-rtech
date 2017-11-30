@@ -3,79 +3,16 @@ project(mouse_reader)
 
 set(CMAKE_CXX_FLAGS "-std=c++11")
 
-## Find catkin macros and libraries
-## if COMPONENTS list like find_package(catkin REQUIRED COMPONENTS xyz)
-## is used, also find other catkin packages
-find_package(catkin REQUIRED COMPONENTS
-geometry_msgs
-	roscpp
-	rospy
-	std_msgs
 
-)
-# add_message_files(FILES mouse.msg))
+find_package(catkin REQUIRED COMPONENTS geometry_msgs roscpp rospy std_msgs message_generation)
 
-## Generate services in the 'srv' folder
-# add_service_files(
-#   FILES
-#   Service1.srv
-#   Service2.srv
-# )
-
-## Generate actions in the 'action' folder
-# add_action_files(
-#   FILES
-#   Action1.action
-#   Action2.action
-# )
-
-## Generate added messages and services with any dependencies listed here
- #generate_messages(
-  # DEPENDENCIES
- #  std_msgs
-#  LIBRARIES mouse_reader
-#  CATKIN_DEPENDS other_catkin_pkg
- # DEPENDS message_runtime
-#)
-
-###########
-## Build ##
-###########
-
-## Specify additional locations of header files
-## Your package locations should be listed before other locations
+add_message_files(FILES mouse.msg)
+generate_messages(DEPENDENCIES std_msgs geometry_msgs)
 catkin_package()
 
-## Declare a C++ library
-# add_library(${PROJECT_NAME}
-#   src/${PROJECT_NAME}/mouse_reader.cpp
-# )
-
-## Add cmake target dependencies of the library
-## as an example, code may need to be generated before libraries
-## either from message generation or dynamic reconfigure
-# add_dependencies(${PROJECT_NAME} ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
-
-## Declare a C++ executable
-## With catkin_make all packages are built within a single CMake context
-## The recommended prefix ensures that target names across packages don't collide
-# add_executable(${PROJECT_NAME}_node src/mouse_reader_node.cpp)
-
-## Rename C++ executable without prefix
-## The above recommended prefix causes long target names, the following renames the
-## target back to the shorter version for ease of user use
-## e.g. "rosrun someones_pkg node" instead of "rosrun someones_pkg someones_pkg_node"
-# set_target_properties(${PROJECT_NAME}_node PROPERTIES OUTPUT_NAME node PREFIX "")
-
-## Add cmake target dependencies of the executable
-## same as for the library above
-# add_dependencies(${PROJECT_NAME}_node ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
-
 ## Specify libraries to link a library or executable target against
-# target_link_libraries(${PROJECT_NAME}_node
-#   ${catkin_LIBRARIES}
-# )
 include_directories(include ${catkin_INCLUDE_DIRS})
+
 add_executable(mouse_read src/mouse_reader.cpp)
 target_link_libraries(mouse_read ${catkin_LIBRARIES})
-
+add_dependencies(mouse_read mouse_reader_generate_messages_cpp)

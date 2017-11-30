@@ -6,6 +6,26 @@
 
 #IncludeRegexTransform: 
 
+/home/tudeng/silvar-rtech/devel/include/mouse_reader/mouse.h
+string
+-
+vector
+-
+map
+-
+ros/types.h
+-
+ros/serialization.h
+-
+ros/builtin_message_traits.h
+-
+ros/message_operations.h
+-
+std_msgs/Header.h
+-
+geometry_msgs/Point32.h
+-
+
 /home/tudeng/silvar-rtech/src/mouse_reader/src/mouse_reader.cpp
 cstdlib
 -
@@ -39,6 +59,8 @@ glob.h
 -
 sstream
 -
+mouse_reader/mouse.h
+/home/tudeng/silvar-rtech/src/mouse_reader/src/mouse_reader/mouse.h
 
 /opt/ros/indigo/include/XmlRpcDecl.h
 ros/macros.h
@@ -701,4 +723,20 @@ ros/forwards.h
 /opt/ros/indigo/include/ros/ros/forwards.h
 
 /opt/ros/indigo/include/rosconsole/macros_generated.h
+
+/opt/ros/indigo/include/std_msgs/Header.h
+string
+-
+vector
+-
+map
+-
+ros/types.h
+-
+ros/serialization.h
+-
+ros/builtin_message_traits.h
+-
+ros/message_operations.h
+-
 

@@ -1,5 +1,6 @@
-
-#include "mouse_reader/mouse.h"
+#include "ros/ros.h"
+#include "geometry_msgs/Point32.h"
+#include <linux/input.h>
 #include <stdio.h>
 #include <unistd.h>
 #include <fcntl.h>
@@ -9,20 +10,31 @@
 #include <tuple>
 #include "std_msgs/String.h"
 
+int main(int argc, char** argv)
+{
+ros::init(argc, argv, "mouse_reader");
+ros::NodeHandle n;
+    
+ros::Publisher Mouse_pub = n.advertise<geometry_msgs::Point32> ("mouse_msg",1000);
+ros::Rate loop_rate(10);
 
+geometry_msgs::Point32 mouse_msg;
 
-	
-const char *pDevice = "/dev/input/event4";
+const char pDevice = "/dev/input/event4";
+int bytes;
+
+unsigned char data[3];
+signed char x, y;
+int left;
+
+//int8_t pos[5] = {0,0,0,0,0};
 
     
 // Open Mouse
 int fd = open(pDevice, O_RDWR);
 
-
-
-/*
-    while(ros::ok())
-    {*/
+while(ros::ok())
+    {
         // Read Mouse     
         bytes = read(fd, data, sizeof(data));
 
@@ -34,28 +46,13 @@ int fd = open(pDevice, O_RDWR);
 
             printf("x=%d, y=%d, left=%d", x, y, left);
 	}
-	mouse_reader::Mouse mouse_msg;
-	//char mouse_msg;
 	mouse_msg.x = x;
 	mouse_msg.y = y;
 	mouse_msg.left = left;
-
-int main(int argc, char** argv)
-{
-
-    ros::init(argc, argv, "mouse_reader");
-    ros::NodeHandle n;
-    
-    ros::Publisher Mouse_pub = n.advertise<mouse_reader::Mouse> ("mouse_msg",1000);
-    ros::Rate loop_rate(10);
-
-	while(ros::ok())
-    {
 	Mouse_pub.publish(mouse_msg);
 	ros::spinOnce();
 	loop_rate.sleep();
-	}
-    
+	} 
     return 0; 
 }
 

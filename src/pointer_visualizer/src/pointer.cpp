@@ -2,6 +2,7 @@
 #include "std_msgs/String.h"
 #include "geometry_msgs/PointStamped.h"
 #include "geometry_msgs/Point32.h"
+#include "mouse_reader/mouse.h"
 #include <sstream>
 #include <iostream>
 
@@ -9,12 +10,14 @@ using namespace std;
 float x;
 float y;
 float z;
+bool nupp;
 
-void mouseCallback(const geometry_msgs::Point32 mouse_msg) 
+void mouseCallback(const mouse_reader::mouse mouse_msg) 
 {
-  x = mouse_msg.x;
-  y = mouse_msg.y;
-  z = mouse_msg.z;
+  x = mouse_msg.xy_asukoht.x;
+  y = mouse_msg.xy_asukoht.y;
+  z = mouse_msg.xy_asukoht.z;
+  nupp = mouse_msg.mouse_bool;
 
 }
 
@@ -39,22 +42,22 @@ int count = 0;
 while(ros::ok())
 	{
 
-
 point.header.seq = count;
 point.header.frame_id = "odom";
 point.point.x = -x/10;
 point.point.y = y/10;
 point.point.z = 0.0;
 
+
 cout << "x on: "<< point.point.x ;
-cout << "    y on: "<< point.point.y << endl;	
+cout << "    y on: "<< point.point.y;	
+cout << "           nupp on: "<< nupp << endl;
 
 
 point_pub.publish(point);
 ros::spinOnce();
 loop_rate.sleep();
 count++;
-
-	}
+}
 }
 

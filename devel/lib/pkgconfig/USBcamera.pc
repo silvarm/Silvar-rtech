@@ -1,7 +1,7 @@
 prefix=/home/tudeng/silvar-rtech/devel
 
-Name: usbcamera
-Description: Description of usbcamera
+Name: USBcamera
+Description: Description of USBcamera
 Version: 0.0.0
 Cflags: 
 Libs: -L/home/tudeng/silvar-rtech/devel/lib 

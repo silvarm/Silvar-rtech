@@ -15,6 +15,8 @@ geometry_msgs/PointStamped.h
 /home/tudeng/silvar-rtech/src/pointer_visualizer/src/geometry_msgs/PointStamped.h
 geometry_msgs/Point32.h
 /home/tudeng/silvar-rtech/src/pointer_visualizer/src/geometry_msgs/Point32.h
+mouse_reader/mouse.h
+/home/tudeng/silvar-rtech/src/pointer_visualizer/src/mouse_reader/mouse.h
 sstream
 -
 iostream

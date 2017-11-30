@@ -1,0 +1,8 @@
+prefix=/home/tudeng/silvar-rtech/install
+
+Name: USBcamera
+Description: Description of USBcamera
+Version: 0.0.0
+Cflags: 
+Libs: -L/home/tudeng/silvar-rtech/install/lib 
+Requires: 
