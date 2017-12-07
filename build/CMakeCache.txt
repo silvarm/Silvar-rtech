@@ -14,8 +14,32 @@
 # EXTERNAL cache entries
 ########################
 
+//The threading library used by boost-thread
+BOOST_THREAD_LIBRARY:FILEPATH=/usr/lib/x86_64-linux-gnu/libpthread.so
+
 //Build shared libraries (DLLs).
 BUILD_SHARED_LIBS:BOOL=ON
+
+//The directory containing a CMake configuration file for Boost.
+Boost_DIR:PATH=Boost_DIR-NOTFOUND
+
+//Path to a file.
+Boost_INCLUDE_DIR:PATH=/usr/include
+
+//Boost library directory
+Boost_LIBRARY_DIR:PATH=/usr/lib/x86_64-linux-gnu
+
+//Boost system library (debug)
+Boost_SYSTEM_LIBRARY_DEBUG:FILEPATH=/usr/lib/x86_64-linux-gnu/libboost_system.so
+
+//Boost system library (release)
+Boost_SYSTEM_LIBRARY_RELEASE:FILEPATH=/usr/lib/x86_64-linux-gnu/libboost_system.so
+
+//Boost thread library (debug)
+Boost_THREAD_LIBRARY_DEBUG:FILEPATH=/usr/lib/x86_64-linux-gnu/libboost_thread.so
+
+//Boost thread library (release)
+Boost_THREAD_LIBRARY_RELEASE:FILEPATH=/usr/lib/x86_64-linux-gnu/libboost_thread.so
 
 //List of ';' separated packages to exclude
 CATKIN_BLACKLIST_PACKAGES:STRING=
@@ -257,6 +281,12 @@ _CATKIN_GTEST_INCLUDE:FILEPATH=/usr/include/gtest/gtest.h
 //Path to a file.
 _CATKIN_GTEST_SRC:FILEPATH=/usr/src/gtest/src/gtest.cc
 
+//The directory containing a CMake configuration file for actionlib.
+actionlib_DIR:PATH=/opt/ros/indigo/share/actionlib/cmake
+
+//The directory containing a CMake configuration file for actionlib_msgs.
+actionlib_msgs_DIR:PATH=/opt/ros/indigo/share/actionlib_msgs/cmake
+
 //Value Computed by CMake
 beginners_tutorials_BINARY_DIR:STATIC=/home/tudeng/silvar-rtech/build/beginners_tutorials
 
@@ -266,8 +296,26 @@ beginners_tutorials_SOURCE_DIR:STATIC=/home/tudeng/silvar-rtech/src/beginners_tu
 //The directory containing a CMake configuration file for catkin.
 catkin_DIR:PATH=/opt/ros/indigo/share/catkin/cmake
 
+//The directory containing a CMake configuration file for class_loader.
+class_loader_DIR:PATH=/opt/ros/indigo/share/class_loader/cmake
+
+//The directory containing a CMake configuration file for control_msgs.
+control_msgs_DIR:PATH=/opt/ros/indigo/share/control_msgs/cmake
+
 //The directory containing a CMake configuration file for cpp_common.
 cpp_common_DIR:PATH=/opt/ros/indigo/share/cpp_common/cmake
+
+//Value Computed by CMake
+dual_manipulator_support_BINARY_DIR:STATIC=/home/tudeng/silvar-rtech/build/dual_manipulator_support
+
+//Value Computed by CMake
+dual_manipulator_support_SOURCE_DIR:STATIC=/home/tudeng/silvar-rtech/src/dual_manipulator_support
+
+//The directory containing a CMake configuration file for eigen_conversions.
+eigen_conversions_DIR:PATH=/opt/ros/indigo/share/eigen_conversions/cmake
+
+//The directory containing a CMake configuration file for eigen_stl_containers.
+eigen_stl_containers_DIR:PATH=/opt/ros/indigo/share/eigen_stl_containers/cmake
 
 //The directory containing a CMake configuration file for gencpp.
 gencpp_DIR:PATH=/opt/ros/indigo/share/gencpp/cmake
@@ -280,6 +328,9 @@ genmsg_DIR:PATH=/opt/ros/indigo/share/genmsg/cmake
 
 //The directory containing a CMake configuration file for genpy.
 genpy_DIR:PATH=/opt/ros/indigo/share/genpy/cmake
+
+//The directory containing a CMake configuration file for geometric_shapes.
+geometric_shapes_DIR:PATH=/opt/ros/indigo/share/geometric_shapes/cmake
 
 //The directory containing a CMake configuration file for geometry_msgs.
 geometry_msgs_DIR:PATH=/opt/ros/indigo/share/geometry_msgs/cmake
@@ -309,8 +360,29 @@ gtest_force_shared_crt:BOOL=OFF
 //Dependencies for the target
 gtest_main_LIB_DEPENDS:STATIC=general;-lpthread;general;gtest;
 
+//The directory containing a CMake configuration file for image_transport.
+image_transport_DIR:PATH=/opt/ros/indigo/share/image_transport/cmake
+
+//The directory containing a CMake configuration file for industrial_msgs.
+industrial_msgs_DIR:PATH=/opt/ros/indigo/share/industrial_msgs/cmake
+
+//The directory containing a CMake configuration file for industrial_robot_client.
+industrial_robot_client_DIR:PATH=/opt/ros/indigo/share/industrial_robot_client/cmake
+
+//The directory containing a CMake configuration file for industrial_utils.
+industrial_utils_DIR:PATH=/opt/ros/indigo/share/industrial_utils/cmake
+
+//The directory containing a CMake configuration file for interactive_markers.
+interactive_markers_DIR:PATH=/opt/ros/indigo/share/interactive_markers/cmake
+
+//The directory containing a CMake configuration file for kdl_parser.
+kdl_parser_DIR:PATH=/opt/ros/indigo/share/kdl_parser/cmake
+
 //Path to a library.
 lib:FILEPATH=/opt/ros/indigo/lib/libxmlrpcpp.so
+
+//The directory containing a CMake configuration file for message_filters.
+message_filters_DIR:PATH=/opt/ros/indigo/share/message_filters/cmake
 
 //The directory containing a CMake configuration file for message_generation.
 message_generation_DIR:PATH=/opt/ros/indigo/share/message_generation/cmake
@@ -319,10 +391,150 @@ message_generation_DIR:PATH=/opt/ros/indigo/share/message_generation/cmake
 message_runtime_DIR:PATH=/opt/ros/indigo/share/message_runtime/cmake
 
 //Value Computed by CMake
+motoman_BINARY_DIR:STATIC=/home/tudeng/silvar-rtech/build/motoman/motoman
+
+//Value Computed by CMake
+motoman_SOURCE_DIR:STATIC=/home/tudeng/silvar-rtech/src/motoman/motoman
+
+//Value Computed by CMake
+motoman_driver_BINARY_DIR:STATIC=/home/tudeng/silvar-rtech/build/motoman/motoman_driver
+
+//Value Computed by CMake
+motoman_driver_SOURCE_DIR:STATIC=/home/tudeng/silvar-rtech/src/motoman/motoman_driver
+
+//Dependencies for the target
+motoman_industrial_robot_client_LIB_DEPENDS:STATIC=general;industrial_robot_client;general;industrial_utils;
+
+//Dependencies for the target
+motoman_industrial_robot_client_bswap_LIB_DEPENDS:STATIC=general;industrial_robot_client_bswap;general;industrial_utils;
+
+//Value Computed by CMake
+motoman_mh5_support_BINARY_DIR:STATIC=/home/tudeng/silvar-rtech/build/motoman/motoman_mh5_support
+
+//Value Computed by CMake
+motoman_mh5_support_SOURCE_DIR:STATIC=/home/tudeng/silvar-rtech/src/motoman/motoman_mh5_support
+
+//Value Computed by CMake
+motoman_msgs_BINARY_DIR:STATIC=/home/tudeng/silvar-rtech/build/motoman/motoman_msgs
+
+motoman_msgs_DIR:PATH=
+
+//Value Computed by CMake
+motoman_msgs_SOURCE_DIR:STATIC=/home/tudeng/silvar-rtech/src/motoman/motoman_msgs
+
+//Value Computed by CMake
+motoman_sda10f_moveit_config_BINARY_DIR:STATIC=/home/tudeng/silvar-rtech/build/motoman/motoman_sda10f_moveit_config
+
+//Value Computed by CMake
+motoman_sda10f_moveit_config_SOURCE_DIR:STATIC=/home/tudeng/silvar-rtech/src/motoman/motoman_sda10f_moveit_config
+
+//Value Computed by CMake
+motoman_sda10f_support_BINARY_DIR:STATIC=/home/tudeng/silvar-rtech/build/motoman/motoman_sda10f_support
+
+//Value Computed by CMake
+motoman_sda10f_support_SOURCE_DIR:STATIC=/home/tudeng/silvar-rtech/src/motoman/motoman_sda10f_support
+
+//Value Computed by CMake
+motoman_sia10d_support_BINARY_DIR:STATIC=/home/tudeng/silvar-rtech/build/motoman/motoman_sia10d_support
+
+//Value Computed by CMake
+motoman_sia10d_support_SOURCE_DIR:STATIC=/home/tudeng/silvar-rtech/src/motoman/motoman_sia10d_support
+
+//Value Computed by CMake
+motoman_sia10f_support_BINARY_DIR:STATIC=/home/tudeng/silvar-rtech/build/motoman/motoman_sia10f_support
+
+//Value Computed by CMake
+motoman_sia10f_support_SOURCE_DIR:STATIC=/home/tudeng/silvar-rtech/src/motoman/motoman_sia10f_support
+
+//Value Computed by CMake
+motoman_sia20d_moveit_config_BINARY_DIR:STATIC=/home/tudeng/silvar-rtech/build/motoman/motoman_sia20d_moveit_config
+
+//Value Computed by CMake
+motoman_sia20d_moveit_config_SOURCE_DIR:STATIC=/home/tudeng/silvar-rtech/src/motoman/motoman_sia20d_moveit_config
+
+//Value Computed by CMake
+motoman_sia20d_support_BINARY_DIR:STATIC=/home/tudeng/silvar-rtech/build/motoman/motoman_sia20d_support
+
+//Value Computed by CMake
+motoman_sia20d_support_SOURCE_DIR:STATIC=/home/tudeng/silvar-rtech/src/motoman/motoman_sia20d_support
+
+//Value Computed by CMake
+motoman_sia5d_moveit_config_BINARY_DIR:STATIC=/home/tudeng/silvar-rtech/build/motoman_sia5d_moveit_config
+
+//Value Computed by CMake
+motoman_sia5d_moveit_config_SOURCE_DIR:STATIC=/home/tudeng/silvar-rtech/src/motoman_sia5d_moveit_config
+
+//Value Computed by CMake
+motoman_sia5d_support_BINARY_DIR:STATIC=/home/tudeng/silvar-rtech/build/motoman/motoman_sia5d_support
+
+//Value Computed by CMake
+motoman_sia5d_support_SOURCE_DIR:STATIC=/home/tudeng/silvar-rtech/src/motoman/motoman_sia5d_support
+
+//Dependencies for the target
+motoman_simple_message_LIB_DEPENDS:STATIC=general;simple_message;
+
+//Dependencies for the target
+motoman_simple_message_bswap_LIB_DEPENDS:STATIC=general;simple_message_bswap;
+
+//Value Computed by CMake
 mouse_reader_BINARY_DIR:STATIC=/home/tudeng/silvar-rtech/build/mouse_reader
 
 //Value Computed by CMake
 mouse_reader_SOURCE_DIR:STATIC=/home/tudeng/silvar-rtech/src/mouse_reader
+
+//The directory containing a CMake configuration file for moveit_commander.
+moveit_commander_DIR:PATH=/opt/ros/indigo/share/moveit_commander/cmake
+
+//The directory containing a CMake configuration file for moveit_core.
+moveit_core_DIR:PATH=/opt/ros/indigo/share/moveit_core/cmake
+
+//The directory containing a CMake configuration file for moveit_fake_controller_manager.
+moveit_fake_controller_manager_DIR:PATH=/opt/ros/indigo/share/moveit_fake_controller_manager/cmake
+
+//The directory containing a CMake configuration file for moveit_msgs.
+moveit_msgs_DIR:PATH=/opt/ros/indigo/share/moveit_msgs/cmake
+
+//The directory containing a CMake configuration file for moveit_planners_ompl.
+moveit_planners_ompl_DIR:PATH=/opt/ros/indigo/share/moveit_planners_ompl/cmake
+
+//The directory containing a CMake configuration file for moveit_ros_benchmarks.
+moveit_ros_benchmarks_DIR:PATH=/opt/ros/indigo/share/moveit_ros_benchmarks/cmake
+
+//The directory containing a CMake configuration file for moveit_ros_benchmarks_gui.
+moveit_ros_benchmarks_gui_DIR:PATH=/opt/ros/indigo/share/moveit_ros_benchmarks_gui/cmake
+
+//The directory containing a CMake configuration file for moveit_ros_control_interface.
+moveit_ros_control_interface_DIR:PATH=/opt/ros/indigo/share/moveit_ros_control_interface/cmake
+
+//The directory containing a CMake configuration file for moveit_ros_manipulation.
+moveit_ros_manipulation_DIR:PATH=/opt/ros/indigo/share/moveit_ros_manipulation/cmake
+
+//The directory containing a CMake configuration file for moveit_ros_move_group.
+moveit_ros_move_group_DIR:PATH=/opt/ros/indigo/share/moveit_ros_move_group/cmake
+
+//The directory containing a CMake configuration file for moveit_ros_perception.
+moveit_ros_perception_DIR:PATH=/opt/ros/indigo/share/moveit_ros_perception/cmake
+
+//The directory containing a CMake configuration file for moveit_ros_planning.
+moveit_ros_planning_DIR:PATH=/opt/ros/indigo/share/moveit_ros_planning/cmake
+
+//The directory containing a CMake configuration file for moveit_ros_planning_interface.
+moveit_ros_planning_interface_DIR:PATH=/opt/ros/indigo/share/moveit_ros_planning_interface/cmake
+
+//The directory containing a CMake configuration file for moveit_ros_robot_interaction.
+moveit_ros_robot_interaction_DIR:PATH=/opt/ros/indigo/share/moveit_ros_robot_interaction/cmake
+
+//The directory containing a CMake configuration file for moveit_ros_visualization.
+moveit_ros_visualization_DIR:PATH=/opt/ros/indigo/share/moveit_ros_visualization/cmake
+
+//The directory containing a CMake configuration file for moveit_ros_warehouse.
+moveit_ros_warehouse_DIR:PATH=/opt/ros/indigo/share/moveit_ros_warehouse/cmake
+
+//The directory containing a CMake configuration file for moveit_setup_assistant.
+moveit_setup_assistant_DIR:PATH=/opt/ros/indigo/share/moveit_setup_assistant/cmake
+
+//The directory containing a CMake configuration file for moveit_simple_controller_manager.
+moveit_simple_controller_manager_DIR:PATH=/opt/ros/indigo/share/moveit_simple_controller_manager/cmake
 
 //Value Computed by CMake
 my_r2d2_BINARY_DIR:STATIC=/home/tudeng/silvar-rtech/build/my_r2d2
@@ -330,11 +542,20 @@ my_r2d2_BINARY_DIR:STATIC=/home/tudeng/silvar-rtech/build/my_r2d2
 //Value Computed by CMake
 my_r2d2_SOURCE_DIR:STATIC=/home/tudeng/silvar-rtech/src/my_r2d2
 
+//The directory containing a CMake configuration file for object_recognition_msgs.
+object_recognition_msgs_DIR:PATH=/opt/ros/indigo/share/object_recognition_msgs/cmake
+
+//The directory containing a CMake configuration file for octomap_msgs.
+octomap_msgs_DIR:PATH=/opt/ros/indigo/share/octomap_msgs/cmake
+
 //Value Computed by CMake
 planning_tutorial_BINARY_DIR:STATIC=/home/tudeng/silvar-rtech/build/planning_tutorial
 
 //Value Computed by CMake
 planning_tutorial_SOURCE_DIR:STATIC=/home/tudeng/silvar-rtech/src/planning_tutorial
+
+//The directory containing a CMake configuration file for pluginlib.
+pluginlib_DIR:PATH=/opt/ros/indigo/share/pluginlib/cmake
 
 //Value Computed by CMake
 pointer_visualizer_BINARY_DIR:STATIC=/home/tudeng/silvar-rtech/build/pointer_visualizer
@@ -342,8 +563,14 @@ pointer_visualizer_BINARY_DIR:STATIC=/home/tudeng/silvar-rtech/build/pointer_vis
 //Value Computed by CMake
 pointer_visualizer_SOURCE_DIR:STATIC=/home/tudeng/silvar-rtech/src/pointer_visualizer
 
+//The directory containing a CMake configuration file for random_numbers.
+random_numbers_DIR:PATH=/opt/ros/indigo/share/random_numbers/cmake
+
 //The directory containing a CMake configuration file for rosconsole.
 rosconsole_DIR:PATH=/opt/ros/indigo/share/rosconsole/cmake
+
+//The directory containing a CMake configuration file for rosconsole_bridge.
+rosconsole_bridge_DIR:PATH=/opt/ros/indigo/share/rosconsole_bridge/cmake
 
 //The directory containing a CMake configuration file for roscpp.
 roscpp_DIR:PATH=/opt/ros/indigo/share/roscpp/cmake
@@ -354,8 +581,23 @@ roscpp_serialization_DIR:PATH=/opt/ros/indigo/share/roscpp_serialization/cmake
 //The directory containing a CMake configuration file for roscpp_traits.
 roscpp_traits_DIR:PATH=/opt/ros/indigo/share/roscpp_traits/cmake
 
+//The directory containing a CMake configuration file for rosgraph.
+rosgraph_DIR:PATH=/opt/ros/indigo/share/rosgraph/cmake
+
 //The directory containing a CMake configuration file for rosgraph_msgs.
 rosgraph_msgs_DIR:PATH=/opt/ros/indigo/share/rosgraph_msgs/cmake
+
+//The directory containing a CMake configuration file for roslaunch.
+roslaunch_DIR:PATH=/opt/ros/indigo/share/roslaunch/cmake
+
+//The directory containing a CMake configuration file for roslib.
+roslib_DIR:PATH=/opt/ros/indigo/share/roslib/cmake
+
+//The directory containing a CMake configuration file for roslint.
+roslint_DIR:PATH=/opt/ros/indigo/share/roslint/cmake
+
+//The directory containing a CMake configuration file for rospack.
+rospack_DIR:PATH=/opt/ros/indigo/share/rospack/cmake
 
 //The directory containing a CMake configuration file for rospy.
 rospy_DIR:PATH=/opt/ros/indigo/share/rospy/cmake
@@ -363,14 +605,119 @@ rospy_DIR:PATH=/opt/ros/indigo/share/rospy/cmake
 //The directory containing a CMake configuration file for rostime.
 rostime_DIR:PATH=/opt/ros/indigo/share/rostime/cmake
 
+//The directory containing a CMake configuration file for rqt_moveit.
+rqt_moveit_DIR:PATH=/opt/ros/indigo/share/rqt_moveit/cmake
+
+//The directory containing a CMake configuration file for sensor_msgs.
+sensor_msgs_DIR:PATH=/opt/ros/indigo/share/sensor_msgs/cmake
+
+//The directory containing a CMake configuration file for shape_msgs.
+shape_msgs_DIR:PATH=/opt/ros/indigo/share/shape_msgs/cmake
+
+//The directory containing a CMake configuration file for simple_message.
+simple_message_DIR:PATH=/opt/ros/indigo/share/simple_message/cmake
+
+//The directory containing a CMake configuration file for srdfdom.
+srdfdom_DIR:PATH=/opt/ros/indigo/share/srdfdom/cmake
+
 //The directory containing a CMake configuration file for std_msgs.
 std_msgs_DIR:PATH=/opt/ros/indigo/share/std_msgs/cmake
+
+//The directory containing a CMake configuration file for std_srvs.
+std_srvs_DIR:PATH=/opt/ros/indigo/share/std_srvs/cmake
+
+//The directory containing a CMake configuration file for stdmsgs.
+stdmsgs_DIR:PATH=stdmsgs_DIR-NOTFOUND
+
+//The directory containing a CMake configuration file for tf2.
+tf2_DIR:PATH=/opt/ros/indigo/share/tf2/cmake
+
+//The directory containing a CMake configuration file for tf2_msgs.
+tf2_msgs_DIR:PATH=/opt/ros/indigo/share/tf2_msgs/cmake
+
+//The directory containing a CMake configuration file for tf2_py.
+tf2_py_DIR:PATH=/opt/ros/indigo/share/tf2_py/cmake
+
+//The directory containing a CMake configuration file for tf2_ros.
+tf2_ros_DIR:PATH=/opt/ros/indigo/share/tf2_ros/cmake
+
+//The directory containing a CMake configuration file for tf.
+tf_DIR:PATH=/opt/ros/indigo/share/tf/cmake
+
+//The directory containing a CMake configuration file for trajectory_msgs.
+trajectory_msgs_DIR:PATH=/opt/ros/indigo/share/trajectory_msgs/cmake
+
+//Value Computed by CMake
+turtlebot_dashboard_BINARY_DIR:STATIC=/home/tudeng/silvar-rtech/build/turtlebot_interactions/turtlebot_dashboard
+
+//Value Computed by CMake
+turtlebot_dashboard_SOURCE_DIR:STATIC=/home/tudeng/silvar-rtech/src/turtlebot_interactions/turtlebot_dashboard
+
+//Value Computed by CMake
+turtlebot_interactions_BINARY_DIR:STATIC=/home/tudeng/silvar-rtech/build/turtlebot_interactions/turtlebot_interactions
+
+//Value Computed by CMake
+turtlebot_interactions_SOURCE_DIR:STATIC=/home/tudeng/silvar-rtech/src/turtlebot_interactions/turtlebot_interactions
+
+//Value Computed by CMake
+turtlebot_interactive_markers_BINARY_DIR:STATIC=/home/tudeng/silvar-rtech/build/turtlebot_interactions/turtlebot_interactive_markers
+
+//Value Computed by CMake
+turtlebot_interactive_markers_SOURCE_DIR:STATIC=/home/tudeng/silvar-rtech/src/turtlebot_interactions/turtlebot_interactive_markers
+
+//Value Computed by CMake
+turtlebot_rviz_launchers_BINARY_DIR:STATIC=/home/tudeng/silvar-rtech/build/turtlebot_interactions/turtlebot_rviz_launchers
+
+//Value Computed by CMake
+turtlebot_rviz_launchers_SOURCE_DIR:STATIC=/home/tudeng/silvar-rtech/src/turtlebot_interactions/turtlebot_rviz_launchers
+
+//Value Computed by CMake
+universal_robot_BINARY_DIR:STATIC=/home/tudeng/silvar-rtech/build/universal_robot/universal_robot
+
+//Value Computed by CMake
+universal_robot_SOURCE_DIR:STATIC=/home/tudeng/silvar-rtech/src/universal_robot/universal_robot
+
+//Value Computed by CMake
+ur_bringup_BINARY_DIR:STATIC=/home/tudeng/silvar-rtech/build/universal_robot/ur_bringup
+
+//Value Computed by CMake
+ur_bringup_SOURCE_DIR:STATIC=/home/tudeng/silvar-rtech/src/universal_robot/ur_bringup
+
+//Value Computed by CMake
+ur_description_BINARY_DIR:STATIC=/home/tudeng/silvar-rtech/build/universal_robot/ur_description
+
+//Value Computed by CMake
+ur_description_SOURCE_DIR:STATIC=/home/tudeng/silvar-rtech/src/universal_robot/ur_description
+
+//Value Computed by CMake
+ur_gazebo_BINARY_DIR:STATIC=/home/tudeng/silvar-rtech/build/universal_robot/ur_gazebo
+
+//Value Computed by CMake
+ur_gazebo_SOURCE_DIR:STATIC=/home/tudeng/silvar-rtech/src/universal_robot/ur_gazebo
+
+//Value Computed by CMake
+ur_msgs_BINARY_DIR:STATIC=/home/tudeng/silvar-rtech/build/universal_robot/ur_msgs
+
+//Value Computed by CMake
+ur_msgs_SOURCE_DIR:STATIC=/home/tudeng/silvar-rtech/src/universal_robot/ur_msgs
+
+//The directory containing a CMake configuration file for urdf.
+urdf_DIR:PATH=/opt/ros/indigo/share/urdf/cmake
+
+//The directory containing a CMake configuration file for urdfdom_py.
+urdfdom_py_DIR:PATH=/opt/ros/indigo/share/urdfdom_py/cmake
 
 //Value Computed by CMake
 usbcamera_BINARY_DIR:STATIC=/home/tudeng/silvar-rtech/build/usb_camera
 
 //Value Computed by CMake
 usbcamera_SOURCE_DIR:STATIC=/home/tudeng/silvar-rtech/src/usb_camera
+
+//The directory containing a CMake configuration file for visualization_msgs.
+visualization_msgs_DIR:PATH=/opt/ros/indigo/share/visualization_msgs/cmake
+
+//The directory containing a CMake configuration file for warehouse_ros.
+warehouse_ros_DIR:PATH=/opt/ros/indigo/share/warehouse_ros/cmake
 
 //The directory containing a CMake configuration file for xmlrpcpp.
 xmlrpcpp_DIR:PATH=/opt/ros/indigo/share/xmlrpcpp/cmake
@@ -380,6 +727,20 @@ xmlrpcpp_DIR:PATH=/opt/ros/indigo/share/xmlrpcpp/cmake
 # INTERNAL cache entries
 ########################
 
+//ADVANCED property for variable: Boost_DIR
+Boost_DIR-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: Boost_INCLUDE_DIR
+Boost_INCLUDE_DIR-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: Boost_LIBRARY_DIR
+Boost_LIBRARY_DIR-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: Boost_SYSTEM_LIBRARY_DEBUG
+Boost_SYSTEM_LIBRARY_DEBUG-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: Boost_SYSTEM_LIBRARY_RELEASE
+Boost_SYSTEM_LIBRARY_RELEASE-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: Boost_THREAD_LIBRARY_DEBUG
+Boost_THREAD_LIBRARY_DEBUG-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: Boost_THREAD_LIBRARY_RELEASE
+Boost_THREAD_LIBRARY_RELEASE-ADVANCED:INTERNAL=1
 //catkin environment
 CATKIN_ENV:INTERNAL=/home/tudeng/silvar-rtech/build/catkin_generated/env_cached.sh
 CATKIN_TEST_RESULTS_DIR:INTERNAL=/home/tudeng/silvar-rtech/build/test_results
@@ -479,7 +840,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_NM
 CMAKE_NM-ADVANCED:INTERNAL=1
 //number of local generators
-CMAKE_NUMBER_OF_LOCAL_GENERATORS:INTERNAL=9
+CMAKE_NUMBER_OF_LOCAL_GENERATORS:INTERNAL=15
 //ADVANCED property for variable: CMAKE_OBJCOPY
 CMAKE_OBJCOPY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_OBJDUMP
@@ -545,4 +906,12 @@ PYTHON_EXECUTABLE-ADVANCED:INTERNAL=1
 //  And it needs to match.  But setuptools won't tell us where
 // it will install things.
 PYTHON_INSTALL_DIR:INTERNAL=lib/python2.7/dist-packages
+//Components requested for this build tree.
+_Boost_COMPONENTS_SEARCHED:INTERNAL=system;thread
+//Last used Boost_INCLUDE_DIR value.
+_Boost_INCLUDE_DIR_LAST:INTERNAL=/usr/include
+//Last used Boost_LIBRARY_DIR value.
+_Boost_LIBRARY_DIR_LAST:INTERNAL=/usr/lib/x86_64-linux-gnu
+//Last used Boost_USE_MULTITHREADED value.
+_Boost_USE_MULTITHREADED_LAST:INTERNAL=TRUE
 

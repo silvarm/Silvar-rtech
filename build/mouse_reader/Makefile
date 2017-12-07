@@ -167,48 +167,6 @@ _mouse_reader_generate_messages_check_deps_mouse/fast:
 .PHONY : _mouse_reader_generate_messages_check_deps_mouse/fast
 
 # Convenience name for target.
-mouse_reader/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/rule:
-	cd /home/tudeng/silvar-rtech/build && $(MAKE) -f CMakeFiles/Makefile2 mouse_reader/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/rule
-.PHONY : mouse_reader/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/rule
-
-# Convenience name for target.
-geometry_msgs_generate_messages_cpp: mouse_reader/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/rule
-.PHONY : geometry_msgs_generate_messages_cpp
-
-# fast build rule for target.
-geometry_msgs_generate_messages_cpp/fast:
-	cd /home/tudeng/silvar-rtech/build && $(MAKE) -f mouse_reader/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/build.make mouse_reader/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/build
-.PHONY : geometry_msgs_generate_messages_cpp/fast
-
-# Convenience name for target.
-mouse_reader/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/rule:
-	cd /home/tudeng/silvar-rtech/build && $(MAKE) -f CMakeFiles/Makefile2 mouse_reader/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/rule
-.PHONY : mouse_reader/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/rule
-
-# Convenience name for target.
-geometry_msgs_generate_messages_lisp: mouse_reader/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/rule
-.PHONY : geometry_msgs_generate_messages_lisp
-
-# fast build rule for target.
-geometry_msgs_generate_messages_lisp/fast:
-	cd /home/tudeng/silvar-rtech/build && $(MAKE) -f mouse_reader/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/build.make mouse_reader/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/build
-.PHONY : geometry_msgs_generate_messages_lisp/fast
-
-# Convenience name for target.
-mouse_reader/CMakeFiles/geometry_msgs_generate_messages_py.dir/rule:
-	cd /home/tudeng/silvar-rtech/build && $(MAKE) -f CMakeFiles/Makefile2 mouse_reader/CMakeFiles/geometry_msgs_generate_messages_py.dir/rule
-.PHONY : mouse_reader/CMakeFiles/geometry_msgs_generate_messages_py.dir/rule
-
-# Convenience name for target.
-geometry_msgs_generate_messages_py: mouse_reader/CMakeFiles/geometry_msgs_generate_messages_py.dir/rule
-.PHONY : geometry_msgs_generate_messages_py
-
-# fast build rule for target.
-geometry_msgs_generate_messages_py/fast:
-	cd /home/tudeng/silvar-rtech/build && $(MAKE) -f mouse_reader/CMakeFiles/geometry_msgs_generate_messages_py.dir/build.make mouse_reader/CMakeFiles/geometry_msgs_generate_messages_py.dir/build
-.PHONY : geometry_msgs_generate_messages_py/fast
-
-# Convenience name for target.
 mouse_reader/CMakeFiles/mouse_read.dir/rule:
 	cd /home/tudeng/silvar-rtech/build && $(MAKE) -f CMakeFiles/Makefile2 mouse_reader/CMakeFiles/mouse_read.dir/rule
 .PHONY : mouse_reader/CMakeFiles/mouse_read.dir/rule
@@ -352,9 +310,6 @@ help:
 	@echo "... depend"
 	@echo "... _mouse_reader_generate_messages_check_deps_mouse"
 	@echo "... edit_cache"
-	@echo "... geometry_msgs_generate_messages_cpp"
-	@echo "... geometry_msgs_generate_messages_lisp"
-	@echo "... geometry_msgs_generate_messages_py"
 	@echo "... install"
 	@echo "... install/local"
 	@echo "... install/strip"
