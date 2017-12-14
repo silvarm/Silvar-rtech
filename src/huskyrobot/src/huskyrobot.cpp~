@@ -41,7 +41,7 @@ int count = 0;
 while(ros::ok())
 {
 cout << "nupp on  " << nupp;
-if (nupp == 0)
+if (nupp == 1)
 {
 point.linear.x = 0.5; 
 }

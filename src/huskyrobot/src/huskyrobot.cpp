@@ -45,6 +45,11 @@ if (nupp == 1)
 {
 point.linear.x = 0.5; 
 }
+if (nupp == 0)
+{
+point.linear.x = 0; 
+}
+
 
 point_pub.publish(point);
 ros::spinOnce();
