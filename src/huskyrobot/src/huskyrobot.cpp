@@ -1,0 +1,55 @@
+#include "ros/ros.h"
+#include "std_msgs/String.h"
+#include "mouse_reader/mouse.h"
+#include <sstream>
+#include <iostream>
+#include "geometry_msgs/Twist.h"
+
+using namespace std;
+//float x;
+//float y;
+//float z;
+bool nupp;
+
+void mouseCallback(const mouse_reader::mouse mouse_msg) 
+{
+  //x = mouse_msg.xy_asukoht.x;
+ // y = mouse_msg.xy_asukoht.y;
+ // z = mouse_msg.xy_asukoht.z;
+  nupp = mouse_msg.mouse_bool;
+
+}
+
+
+int main(int argc, char **argv)
+{
+cout << "nupp on32  " << nupp;
+  ros::init(argc, argv, "pointer");
+
+  ros::NodeHandle n;
+
+  ros::Subscriber Mouse_pub = n.subscribe("mouse_msg", 1, mouseCallback);
+
+  ros::Publisher point_pub = n.advertise<geometry_msgs::Twist>("XYZ_position2", 1);
+  
+  ros::Rate loop_rate(10);
+
+geometry_msgs::Twist point;
+
+int count = 0;
+
+while(ros::ok())
+{
+cout << "nupp on  " << nupp;
+if (nupp == 1)
+{
+point.linear.x = 0.5; 
+}
+
+point_pub.publish(point);
+ros::spinOnce();
+loop_rate.sleep();
+count++;
+}
+}
+

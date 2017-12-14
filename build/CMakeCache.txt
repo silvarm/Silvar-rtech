@@ -14,32 +14,8 @@
 # EXTERNAL cache entries
 ########################
 
-//The threading library used by boost-thread
-BOOST_THREAD_LIBRARY:FILEPATH=/usr/lib/x86_64-linux-gnu/libpthread.so
-
 //Build shared libraries (DLLs).
 BUILD_SHARED_LIBS:BOOL=ON
-
-//The directory containing a CMake configuration file for Boost.
-Boost_DIR:PATH=Boost_DIR-NOTFOUND
-
-//Path to a file.
-Boost_INCLUDE_DIR:PATH=/usr/include
-
-//Boost library directory
-Boost_LIBRARY_DIR:PATH=/usr/lib/x86_64-linux-gnu
-
-//Boost system library (debug)
-Boost_SYSTEM_LIBRARY_DEBUG:FILEPATH=/usr/lib/x86_64-linux-gnu/libboost_system.so
-
-//Boost system library (release)
-Boost_SYSTEM_LIBRARY_RELEASE:FILEPATH=/usr/lib/x86_64-linux-gnu/libboost_system.so
-
-//Boost thread library (debug)
-Boost_THREAD_LIBRARY_DEBUG:FILEPATH=/usr/lib/x86_64-linux-gnu/libboost_thread.so
-
-//Boost thread library (release)
-Boost_THREAD_LIBRARY_RELEASE:FILEPATH=/usr/lib/x86_64-linux-gnu/libboost_thread.so
 
 //List of ';' separated packages to exclude
 CATKIN_BLACKLIST_PACKAGES:STRING=
@@ -306,6 +282,18 @@ control_msgs_DIR:PATH=/opt/ros/indigo/share/control_msgs/cmake
 cpp_common_DIR:PATH=/opt/ros/indigo/share/cpp_common/cmake
 
 //Value Computed by CMake
+dual_manipulator_config2_BINARY_DIR:STATIC=/home/tudeng/silvar-rtech/build/dual_manipulator_config2
+
+//Value Computed by CMake
+dual_manipulator_config2_SOURCE_DIR:STATIC=/home/tudeng/silvar-rtech/src/dual_manipulator_config2
+
+//Value Computed by CMake
+dual_manipulator_config_BINARY_DIR:STATIC=/home/tudeng/silvar-rtech/build/dual_manipulator_config
+
+//Value Computed by CMake
+dual_manipulator_config_SOURCE_DIR:STATIC=/home/tudeng/silvar-rtech/src/dual_manipulator_config
+
+//Value Computed by CMake
 dual_manipulator_support_BINARY_DIR:STATIC=/home/tudeng/silvar-rtech/build/dual_manipulator_support
 
 //Value Computed by CMake
@@ -360,17 +348,14 @@ gtest_force_shared_crt:BOOL=OFF
 //Dependencies for the target
 gtest_main_LIB_DEPENDS:STATIC=general;-lpthread;general;gtest;
 
+//Value Computed by CMake
+huskyrobot_BINARY_DIR:STATIC=/home/tudeng/silvar-rtech/build/huskyrobot
+
+//Value Computed by CMake
+huskyrobot_SOURCE_DIR:STATIC=/home/tudeng/silvar-rtech/src/huskyrobot
+
 //The directory containing a CMake configuration file for image_transport.
 image_transport_DIR:PATH=/opt/ros/indigo/share/image_transport/cmake
-
-//The directory containing a CMake configuration file for industrial_msgs.
-industrial_msgs_DIR:PATH=/opt/ros/indigo/share/industrial_msgs/cmake
-
-//The directory containing a CMake configuration file for industrial_robot_client.
-industrial_robot_client_DIR:PATH=/opt/ros/indigo/share/industrial_robot_client/cmake
-
-//The directory containing a CMake configuration file for industrial_utils.
-industrial_utils_DIR:PATH=/opt/ros/indigo/share/industrial_utils/cmake
 
 //The directory containing a CMake configuration file for interactive_markers.
 interactive_markers_DIR:PATH=/opt/ros/indigo/share/interactive_markers/cmake
@@ -391,90 +376,10 @@ message_generation_DIR:PATH=/opt/ros/indigo/share/message_generation/cmake
 message_runtime_DIR:PATH=/opt/ros/indigo/share/message_runtime/cmake
 
 //Value Computed by CMake
-motoman_BINARY_DIR:STATIC=/home/tudeng/silvar-rtech/build/motoman/motoman
-
-//Value Computed by CMake
-motoman_SOURCE_DIR:STATIC=/home/tudeng/silvar-rtech/src/motoman/motoman
-
-//Value Computed by CMake
-motoman_driver_BINARY_DIR:STATIC=/home/tudeng/silvar-rtech/build/motoman/motoman_driver
-
-//Value Computed by CMake
-motoman_driver_SOURCE_DIR:STATIC=/home/tudeng/silvar-rtech/src/motoman/motoman_driver
-
-//Dependencies for the target
-motoman_industrial_robot_client_LIB_DEPENDS:STATIC=general;industrial_robot_client;general;industrial_utils;
-
-//Dependencies for the target
-motoman_industrial_robot_client_bswap_LIB_DEPENDS:STATIC=general;industrial_robot_client_bswap;general;industrial_utils;
-
-//Value Computed by CMake
-motoman_mh5_support_BINARY_DIR:STATIC=/home/tudeng/silvar-rtech/build/motoman/motoman_mh5_support
-
-//Value Computed by CMake
-motoman_mh5_support_SOURCE_DIR:STATIC=/home/tudeng/silvar-rtech/src/motoman/motoman_mh5_support
-
-//Value Computed by CMake
-motoman_msgs_BINARY_DIR:STATIC=/home/tudeng/silvar-rtech/build/motoman/motoman_msgs
-
-motoman_msgs_DIR:PATH=
-
-//Value Computed by CMake
-motoman_msgs_SOURCE_DIR:STATIC=/home/tudeng/silvar-rtech/src/motoman/motoman_msgs
-
-//Value Computed by CMake
-motoman_sda10f_moveit_config_BINARY_DIR:STATIC=/home/tudeng/silvar-rtech/build/motoman/motoman_sda10f_moveit_config
-
-//Value Computed by CMake
-motoman_sda10f_moveit_config_SOURCE_DIR:STATIC=/home/tudeng/silvar-rtech/src/motoman/motoman_sda10f_moveit_config
-
-//Value Computed by CMake
-motoman_sda10f_support_BINARY_DIR:STATIC=/home/tudeng/silvar-rtech/build/motoman/motoman_sda10f_support
-
-//Value Computed by CMake
-motoman_sda10f_support_SOURCE_DIR:STATIC=/home/tudeng/silvar-rtech/src/motoman/motoman_sda10f_support
-
-//Value Computed by CMake
-motoman_sia10d_support_BINARY_DIR:STATIC=/home/tudeng/silvar-rtech/build/motoman/motoman_sia10d_support
-
-//Value Computed by CMake
-motoman_sia10d_support_SOURCE_DIR:STATIC=/home/tudeng/silvar-rtech/src/motoman/motoman_sia10d_support
-
-//Value Computed by CMake
-motoman_sia10f_support_BINARY_DIR:STATIC=/home/tudeng/silvar-rtech/build/motoman/motoman_sia10f_support
-
-//Value Computed by CMake
-motoman_sia10f_support_SOURCE_DIR:STATIC=/home/tudeng/silvar-rtech/src/motoman/motoman_sia10f_support
-
-//Value Computed by CMake
-motoman_sia20d_moveit_config_BINARY_DIR:STATIC=/home/tudeng/silvar-rtech/build/motoman/motoman_sia20d_moveit_config
-
-//Value Computed by CMake
-motoman_sia20d_moveit_config_SOURCE_DIR:STATIC=/home/tudeng/silvar-rtech/src/motoman/motoman_sia20d_moveit_config
-
-//Value Computed by CMake
-motoman_sia20d_support_BINARY_DIR:STATIC=/home/tudeng/silvar-rtech/build/motoman/motoman_sia20d_support
-
-//Value Computed by CMake
-motoman_sia20d_support_SOURCE_DIR:STATIC=/home/tudeng/silvar-rtech/src/motoman/motoman_sia20d_support
-
-//Value Computed by CMake
 motoman_sia5d_moveit_config_BINARY_DIR:STATIC=/home/tudeng/silvar-rtech/build/motoman_sia5d_moveit_config
 
 //Value Computed by CMake
 motoman_sia5d_moveit_config_SOURCE_DIR:STATIC=/home/tudeng/silvar-rtech/src/motoman_sia5d_moveit_config
-
-//Value Computed by CMake
-motoman_sia5d_support_BINARY_DIR:STATIC=/home/tudeng/silvar-rtech/build/motoman/motoman_sia5d_support
-
-//Value Computed by CMake
-motoman_sia5d_support_SOURCE_DIR:STATIC=/home/tudeng/silvar-rtech/src/motoman/motoman_sia5d_support
-
-//Dependencies for the target
-motoman_simple_message_LIB_DEPENDS:STATIC=general;simple_message;
-
-//Dependencies for the target
-motoman_simple_message_bswap_LIB_DEPENDS:STATIC=general;simple_message_bswap;
 
 //Value Computed by CMake
 mouse_reader_BINARY_DIR:STATIC=/home/tudeng/silvar-rtech/build/mouse_reader
@@ -587,14 +492,8 @@ rosgraph_DIR:PATH=/opt/ros/indigo/share/rosgraph/cmake
 //The directory containing a CMake configuration file for rosgraph_msgs.
 rosgraph_msgs_DIR:PATH=/opt/ros/indigo/share/rosgraph_msgs/cmake
 
-//The directory containing a CMake configuration file for roslaunch.
-roslaunch_DIR:PATH=/opt/ros/indigo/share/roslaunch/cmake
-
 //The directory containing a CMake configuration file for roslib.
 roslib_DIR:PATH=/opt/ros/indigo/share/roslib/cmake
-
-//The directory containing a CMake configuration file for roslint.
-roslint_DIR:PATH=/opt/ros/indigo/share/roslint/cmake
 
 //The directory containing a CMake configuration file for rospack.
 rospack_DIR:PATH=/opt/ros/indigo/share/rospack/cmake
@@ -614,17 +513,11 @@ sensor_msgs_DIR:PATH=/opt/ros/indigo/share/sensor_msgs/cmake
 //The directory containing a CMake configuration file for shape_msgs.
 shape_msgs_DIR:PATH=/opt/ros/indigo/share/shape_msgs/cmake
 
-//The directory containing a CMake configuration file for simple_message.
-simple_message_DIR:PATH=/opt/ros/indigo/share/simple_message/cmake
-
 //The directory containing a CMake configuration file for srdfdom.
 srdfdom_DIR:PATH=/opt/ros/indigo/share/srdfdom/cmake
 
 //The directory containing a CMake configuration file for std_msgs.
 std_msgs_DIR:PATH=/opt/ros/indigo/share/std_msgs/cmake
-
-//The directory containing a CMake configuration file for std_srvs.
-std_srvs_DIR:PATH=/opt/ros/indigo/share/std_srvs/cmake
 
 //The directory containing a CMake configuration file for stdmsgs.
 stdmsgs_DIR:PATH=stdmsgs_DIR-NOTFOUND
@@ -646,60 +539,6 @@ tf_DIR:PATH=/opt/ros/indigo/share/tf/cmake
 
 //The directory containing a CMake configuration file for trajectory_msgs.
 trajectory_msgs_DIR:PATH=/opt/ros/indigo/share/trajectory_msgs/cmake
-
-//Value Computed by CMake
-turtlebot_dashboard_BINARY_DIR:STATIC=/home/tudeng/silvar-rtech/build/turtlebot_interactions/turtlebot_dashboard
-
-//Value Computed by CMake
-turtlebot_dashboard_SOURCE_DIR:STATIC=/home/tudeng/silvar-rtech/src/turtlebot_interactions/turtlebot_dashboard
-
-//Value Computed by CMake
-turtlebot_interactions_BINARY_DIR:STATIC=/home/tudeng/silvar-rtech/build/turtlebot_interactions/turtlebot_interactions
-
-//Value Computed by CMake
-turtlebot_interactions_SOURCE_DIR:STATIC=/home/tudeng/silvar-rtech/src/turtlebot_interactions/turtlebot_interactions
-
-//Value Computed by CMake
-turtlebot_interactive_markers_BINARY_DIR:STATIC=/home/tudeng/silvar-rtech/build/turtlebot_interactions/turtlebot_interactive_markers
-
-//Value Computed by CMake
-turtlebot_interactive_markers_SOURCE_DIR:STATIC=/home/tudeng/silvar-rtech/src/turtlebot_interactions/turtlebot_interactive_markers
-
-//Value Computed by CMake
-turtlebot_rviz_launchers_BINARY_DIR:STATIC=/home/tudeng/silvar-rtech/build/turtlebot_interactions/turtlebot_rviz_launchers
-
-//Value Computed by CMake
-turtlebot_rviz_launchers_SOURCE_DIR:STATIC=/home/tudeng/silvar-rtech/src/turtlebot_interactions/turtlebot_rviz_launchers
-
-//Value Computed by CMake
-universal_robot_BINARY_DIR:STATIC=/home/tudeng/silvar-rtech/build/universal_robot/universal_robot
-
-//Value Computed by CMake
-universal_robot_SOURCE_DIR:STATIC=/home/tudeng/silvar-rtech/src/universal_robot/universal_robot
-
-//Value Computed by CMake
-ur_bringup_BINARY_DIR:STATIC=/home/tudeng/silvar-rtech/build/universal_robot/ur_bringup
-
-//Value Computed by CMake
-ur_bringup_SOURCE_DIR:STATIC=/home/tudeng/silvar-rtech/src/universal_robot/ur_bringup
-
-//Value Computed by CMake
-ur_description_BINARY_DIR:STATIC=/home/tudeng/silvar-rtech/build/universal_robot/ur_description
-
-//Value Computed by CMake
-ur_description_SOURCE_DIR:STATIC=/home/tudeng/silvar-rtech/src/universal_robot/ur_description
-
-//Value Computed by CMake
-ur_gazebo_BINARY_DIR:STATIC=/home/tudeng/silvar-rtech/build/universal_robot/ur_gazebo
-
-//Value Computed by CMake
-ur_gazebo_SOURCE_DIR:STATIC=/home/tudeng/silvar-rtech/src/universal_robot/ur_gazebo
-
-//Value Computed by CMake
-ur_msgs_BINARY_DIR:STATIC=/home/tudeng/silvar-rtech/build/universal_robot/ur_msgs
-
-//Value Computed by CMake
-ur_msgs_SOURCE_DIR:STATIC=/home/tudeng/silvar-rtech/src/universal_robot/ur_msgs
 
 //The directory containing a CMake configuration file for urdf.
 urdf_DIR:PATH=/opt/ros/indigo/share/urdf/cmake
@@ -727,20 +566,6 @@ xmlrpcpp_DIR:PATH=/opt/ros/indigo/share/xmlrpcpp/cmake
 # INTERNAL cache entries
 ########################
 
-//ADVANCED property for variable: Boost_DIR
-Boost_DIR-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: Boost_INCLUDE_DIR
-Boost_INCLUDE_DIR-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: Boost_LIBRARY_DIR
-Boost_LIBRARY_DIR-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: Boost_SYSTEM_LIBRARY_DEBUG
-Boost_SYSTEM_LIBRARY_DEBUG-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: Boost_SYSTEM_LIBRARY_RELEASE
-Boost_SYSTEM_LIBRARY_RELEASE-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: Boost_THREAD_LIBRARY_DEBUG
-Boost_THREAD_LIBRARY_DEBUG-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: Boost_THREAD_LIBRARY_RELEASE
-Boost_THREAD_LIBRARY_RELEASE-ADVANCED:INTERNAL=1
 //catkin environment
 CATKIN_ENV:INTERNAL=/home/tudeng/silvar-rtech/build/catkin_generated/env_cached.sh
 CATKIN_TEST_RESULTS_DIR:INTERNAL=/home/tudeng/silvar-rtech/build/test_results
@@ -840,7 +665,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_NM
 CMAKE_NM-ADVANCED:INTERNAL=1
 //number of local generators
-CMAKE_NUMBER_OF_LOCAL_GENERATORS:INTERNAL=15
+CMAKE_NUMBER_OF_LOCAL_GENERATORS:INTERNAL=13
 //ADVANCED property for variable: CMAKE_OBJCOPY
 CMAKE_OBJCOPY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_OBJDUMP
@@ -906,12 +731,4 @@ PYTHON_EXECUTABLE-ADVANCED:INTERNAL=1
 //  And it needs to match.  But setuptools won't tell us where
 // it will install things.
 PYTHON_INSTALL_DIR:INTERNAL=lib/python2.7/dist-packages
-//Components requested for this build tree.
-_Boost_COMPONENTS_SEARCHED:INTERNAL=system;thread
-//Last used Boost_INCLUDE_DIR value.
-_Boost_INCLUDE_DIR_LAST:INTERNAL=/usr/include
-//Last used Boost_LIBRARY_DIR value.
-_Boost_LIBRARY_DIR_LAST:INTERNAL=/usr/lib/x86_64-linux-gnu
-//Last used Boost_USE_MULTITHREADED value.
-_Boost_USE_MULTITHREADED_LAST:INTERNAL=TRUE
 

@@ -1,0 +1,8 @@
+prefix=/home/tudeng/silvar-rtech/devel
+
+Name: dual_manipulator_config2
+Description: Description of dual_manipulator_config2
+Version: 0.3.0
+Cflags: 
+Libs: -L/home/tudeng/silvar-rtech/devel/lib 
+Requires: 

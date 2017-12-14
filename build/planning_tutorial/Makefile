@@ -629,6 +629,48 @@ tf_generate_messages_py/fast:
 .PHONY : tf_generate_messages_py/fast
 
 # Convenience name for target.
+planning_tutorial/CMakeFiles/trajectory_msgs_generate_messages_cpp.dir/rule:
+	cd /home/tudeng/silvar-rtech/build && $(MAKE) -f CMakeFiles/Makefile2 planning_tutorial/CMakeFiles/trajectory_msgs_generate_messages_cpp.dir/rule
+.PHONY : planning_tutorial/CMakeFiles/trajectory_msgs_generate_messages_cpp.dir/rule
+
+# Convenience name for target.
+trajectory_msgs_generate_messages_cpp: planning_tutorial/CMakeFiles/trajectory_msgs_generate_messages_cpp.dir/rule
+.PHONY : trajectory_msgs_generate_messages_cpp
+
+# fast build rule for target.
+trajectory_msgs_generate_messages_cpp/fast:
+	cd /home/tudeng/silvar-rtech/build && $(MAKE) -f planning_tutorial/CMakeFiles/trajectory_msgs_generate_messages_cpp.dir/build.make planning_tutorial/CMakeFiles/trajectory_msgs_generate_messages_cpp.dir/build
+.PHONY : trajectory_msgs_generate_messages_cpp/fast
+
+# Convenience name for target.
+planning_tutorial/CMakeFiles/trajectory_msgs_generate_messages_lisp.dir/rule:
+	cd /home/tudeng/silvar-rtech/build && $(MAKE) -f CMakeFiles/Makefile2 planning_tutorial/CMakeFiles/trajectory_msgs_generate_messages_lisp.dir/rule
+.PHONY : planning_tutorial/CMakeFiles/trajectory_msgs_generate_messages_lisp.dir/rule
+
+# Convenience name for target.
+trajectory_msgs_generate_messages_lisp: planning_tutorial/CMakeFiles/trajectory_msgs_generate_messages_lisp.dir/rule
+.PHONY : trajectory_msgs_generate_messages_lisp
+
+# fast build rule for target.
+trajectory_msgs_generate_messages_lisp/fast:
+	cd /home/tudeng/silvar-rtech/build && $(MAKE) -f planning_tutorial/CMakeFiles/trajectory_msgs_generate_messages_lisp.dir/build.make planning_tutorial/CMakeFiles/trajectory_msgs_generate_messages_lisp.dir/build
+.PHONY : trajectory_msgs_generate_messages_lisp/fast
+
+# Convenience name for target.
+planning_tutorial/CMakeFiles/trajectory_msgs_generate_messages_py.dir/rule:
+	cd /home/tudeng/silvar-rtech/build && $(MAKE) -f CMakeFiles/Makefile2 planning_tutorial/CMakeFiles/trajectory_msgs_generate_messages_py.dir/rule
+.PHONY : planning_tutorial/CMakeFiles/trajectory_msgs_generate_messages_py.dir/rule
+
+# Convenience name for target.
+trajectory_msgs_generate_messages_py: planning_tutorial/CMakeFiles/trajectory_msgs_generate_messages_py.dir/rule
+.PHONY : trajectory_msgs_generate_messages_py
+
+# fast build rule for target.
+trajectory_msgs_generate_messages_py/fast:
+	cd /home/tudeng/silvar-rtech/build && $(MAKE) -f planning_tutorial/CMakeFiles/trajectory_msgs_generate_messages_py.dir/build.make planning_tutorial/CMakeFiles/trajectory_msgs_generate_messages_py.dir/build
+.PHONY : trajectory_msgs_generate_messages_py/fast
+
+# Convenience name for target.
 planning_tutorial/CMakeFiles/triangle.dir/rule:
 	cd /home/tudeng/silvar-rtech/build && $(MAKE) -f CMakeFiles/Makefile2 planning_tutorial/CMakeFiles/triangle.dir/rule
 .PHONY : planning_tutorial/CMakeFiles/triangle.dir/rule
@@ -779,6 +821,9 @@ help:
 	@echo "... tf_generate_messages_cpp"
 	@echo "... tf_generate_messages_lisp"
 	@echo "... tf_generate_messages_py"
+	@echo "... trajectory_msgs_generate_messages_cpp"
+	@echo "... trajectory_msgs_generate_messages_lisp"
+	@echo "... trajectory_msgs_generate_messages_py"
 	@echo "... triangle"
 	@echo "... visualization_msgs_generate_messages_cpp"
 	@echo "... visualization_msgs_generate_messages_lisp"

@@ -1,0 +1,5 @@
+<launch>
+	<node pkg="huskycontrol" type="huskycontrol" name="huskycontrol"/>
+
+	<node pkg="huskyrobot" type="huskyrobot" name="huskyrobot"/>
+</launch>
